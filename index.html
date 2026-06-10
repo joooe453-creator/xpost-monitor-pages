@@ -4,19 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>X post monitor • Dashboard</title>
-  <style>:root{--bg:#F9F5F0;--card:#fffdf9;--ink:#1d1b18;--muted:#6f675f;--line:#e7ddd2;--accent:#5b6ee1;--accent2:#8b5cf6;}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}header{padding:34px 22px 18px;max-width:1180px;margin:auto}h1{margin:0;font-size:42px;letter-spacing:-.04em}header p{color:var(--muted);margin:8px 0 0}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:0 10px 25px rgba(70,50,20,.06)}nav{position:sticky;top:0;background:rgba(249,245,240,.92);backdrop-filter:blur(10px);border-block:1px solid var(--line);z-index:3}.tabs{max-width:1180px;margin:auto;display:flex;gap:10px;padding:10px 22px;overflow:auto}.tabs a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:650}main{max-width:1180px;margin:auto;padding:22px}.section{margin:0 0 38px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:0 0 12px}h2{font-size:26px;margin:0}.count{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 12px 35px rgba(70,50,20,.07)}.top{display:flex;justify-content:space-between;gap:10px;align-items:start}.author{font-weight:800}.time{color:var(--muted);font-size:13px;text-align:right}.badges{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:var(--muted);background:#fff}.badge.high{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.summary{font-weight:650}.meta{color:var(--muted);font-size:14px}.orig{white-space:pre-wrap;background:#fbf7f1;border:1px solid var(--line);border-radius:14px;padding:10px;font-size:14px}.link{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700}.postid{font-size:12px;color:var(--muted);margin-top:8px}.data-card{border-color:#d7c7ff;box-shadow:0 14px 36px rgba(91,110,225,.12)}footer{max-width:1180px;margin:auto;padding:0 22px 34px;color:var(--muted)}</style>
+  <style>:root{--bg:#F9F5F0;--card:#fffdf9;--ink:#1d1b18;--muted:#6f675f;--line:#e7ddd2;--accent:#5b6ee1;--accent2:#8b5cf6;}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}header{padding:34px 22px 18px;max-width:1180px;margin:auto}h1{margin:0;font-size:42px;letter-spacing:-.04em}header p{color:var(--muted);margin:8px 0 0}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:0 10px 25px rgba(70,50,20,.06)}nav{position:sticky;top:0;background:rgba(249,245,240,.92);backdrop-filter:blur(10px);border-block:1px solid var(--line);z-index:3}.tabs{max-width:1180px;margin:auto;display:flex;gap:10px;padding:10px 22px;overflow:auto}.tabs a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:650}main{max-width:1180px;margin:auto;padding:22px}.section{margin:0 0 38px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:0 0 12px}h2{font-size:26px;margin:0}.count{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 12px 35px rgba(70,50,20,.07)}.top{display:flex;justify-content:space-between;gap:10px;align-items:start}.author{font-weight:800}.time{color:var(--muted);font-size:13px;text-align:right}.badges{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:var(--muted);background:#fff}.badge.high{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.summary{font-weight:650}.meta{color:var(--muted);font-size:14px}.orig{white-space:pre-wrap;background:#fbf7f1;border:1px solid var(--line);border-radius:14px;padding:10px;margin:10px 0;color:#332f2a}.link{display:inline-block;margin-top:6px;color:var(--accent);font-weight:700}.postid{font-size:12px;color:var(--muted);margin-top:8px}footer{max-width:1180px;margin:auto;padding:20px 22px 42px;color:var(--muted)}</style>
 </head>
 <body>
 <header>
   <h1>X post monitor</h1>
   <p>監測 X List 2057339251940069587 的最新推文，依研究價值整理為精選、公鏈、項目與全部分區。</p>
-  <div class="stats"><div class="stat">更新時間：2026-06-10 18:04 CST</div><div class="stat">本次新增：7</div><div class="stat">累計收錄：944</div><div class="stat">最新 post_id：2064630303881343225</div></div>
+  <div class="stats"><div class="stat">更新時間：2026-06-10 21:03 CST</div><div class="stat">本次新增：5</div><div class="stat">累計收錄：949</div><div class="stat">最新 post_id：2064692644945788968</div></div>
 </header>
 <nav><div class="tabs"><a href="#featured">精選</a><a href="#data-driven">Data-driven / 可 QT</a><a href="#chains">公鏈</a><a href="#projects">項目</a><a href="#all">全部</a></div></nav>
 <main>
 <section class="section" id="featured">
-  <div class="section-head"><h2>精選</h2><span class="count">120 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064630303881343225">
+  <div class="section-head"><h2>精選</h2><span class="count">160 posts</span></div>
+  <div class="grid"><article class="card" id="post-2064692644945788968">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 12:54:21 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 發布穩定幣結算指南，主張可用四層模型把即時終局性、週末支付與低成本結算接入既有支付堆疊。</p>
+  <p class="meta">研究筆記：支付基礎設施與穩定幣結算是高訊號主題，可追蹤 Polygon 如何服務企業支付與 OMS 場景。</p>
+  <div class="orig">Most payment stacks weren&#x27;t built for real-time finality, weekend payouts, or sub-cent settlement. But the fix isn&#x27;t a rebuild.
+
+We put together a guide on the four-layer model for adding stablecoin settlement to the stack you already run.
+
+Download it: https://info.polygon.technology/oms-stablecoins-guide?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=OMS_Stablecoin_Guide_Q2_2026&amp;utm_content=report</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064692644945788968" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064692644945788968</div>
+</article><article class="card" id="post-2064685645755203960">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 12:26:32 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">privacy</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 強調 AI 正降低開發門檻，未來應用競爭將取決於底層基礎設施能力與內建隱私。</p>
+  <p class="meta">研究筆記：AI 開發者工具與隱私基礎設施交集值得追蹤，可作為 Midnight 技術敘事與生態定位線索。</p>
+  <div class="orig">@Utkush23 said it best:
+
+We’re entering a world where AI is collapsing the barrier to building, making it possible for anyone to ship faster than ever before.
+
+What will matter is the infrastructure developers build on and the capabilities they unlock from day one.
+
+And building with privacy at the core? That&#x27;s how you future-proof the next generation of applications.</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064685645755203960" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064685645755203960</div>
+</article><article class="card" id="post-2064663881457553870">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 11:00:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@solana 宣布 WalletConnect Pay 已在 Solana 上線，展示秒級鏈上日常支付場景。</p>
+  <p class="meta">研究筆記：鏈上支付與錢包支付體驗是 Solana 面向消費級採用的重要訊號，可追蹤後續商戶與交易量。</p>
+  <div class="orig">.@WalletConnect Pay is now live on Solana.
+
+A coffee, paid onchain in seconds.</div>
+  <a class="link" href="https://x.com/solana/status/2064663881457553870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064663881457553870</div>
+</article><article class="card" id="post-2064630303881343225">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-10 08:46:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
   <p class="summary">@BNBCHAIN 轉推 Venus Protocol 固定期限金庫已在 BNB Chain 上線，第一期開放供應資產參與。</p>
@@ -1007,11 +1043,329 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Why use $USSD? $USSD is Sonic’s native stablecoin and is vertically integrated across the ecosystem. It is 1:1 redeemable to USDC, while the yield from $USSD backing flows back into the Sonic ecosystem. Mint $USSD: https://my.soniclabs.com/ussd Buy &amp; Stake with $USSD:</div>
   <a class="link" href="https://x.com/SonicLabs/status/2064063302741946756" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064063302741946756</div>
+</article><article class="card" id="post-2064063289819324671">
+  <div class="top"><div class="author">SonicLabs</div><div class="time">19:13:31 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">SonicLabs 介紹原生穩定幣 USSD 的兌換、收益回流與 sftUSD 即時鑄造贖回資訊。</p>
+  <p class="meta">研究筆記：此貼涉及生態建設、資本形成、穩定幣、支付、安全或基礎設施等高訊號主題，適合列入精選追蹤。</p>
+  <div class="orig">$USSD on Sonic Network via sftUSD on @flyingtulip_ is currently earning 25% with zero incentives. No cool-off. No queue. Instant minting and redemption.</div>
+  <a class="link" href="https://x.com/SonicLabs/status/2064063289819324671" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064063289819324671</div>
+</article><article class="card" id="post-2064062536937529742">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">19:10:31 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">0xPolygon 發布一則 reply 更新：Get early access https://polygon.technology/blog/polygon-open-money-stack-enters-technica</p>
+  <p class="meta">研究筆記：此內容屬最新 List 動態，已納入完整歸檔以便後續研究。</p>
+  <div class="orig">Get early access https://polygon.technology/blog/polygon-open-money-stack-enters-technical-preview</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064062536937529742" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064062536937529742</div>
+</article><article class="card" id="post-2064062418053951749">
+  <div class="top"><div class="author">MidnightNtwrk</div><div class="time">19:10:03 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">MidnightNtwrk 轉發生態相關內容：RT @oldiegm3: @MidnightNtwrk Türkiye Lansmanı | Özet Videosu İstanbul Blockchain Week kap</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @oldiegm3: @MidnightNtwrk Türkiye Lansmanı | Özet Videosu İstanbul Blockchain Week kapsamında gerçekleştirdiğimiz unutulmaz geceden g…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064062418053951749" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064062418053951749</div>
+</article><article class="card" id="post-2064060990443168114">
+  <div class="top"><div class="author">avax</div><div class="time">19:04:23 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge high">high</span></div>
+  <p class="summary">avax 轉發生態相關內容：RT @AvalancheFDN: Retro9000 C-Chain Round 4 introduces a new three-tier verification syste</p>
+  <p class="meta">研究筆記：此貼涉及生態建設、資本形成、穩定幣、支付、安全或基礎設施等高訊號主題，適合列入精選追蹤。</p>
+  <div class="orig">RT @AvalancheFDN: Retro9000 C-Chain Round 4 introduces a new three-tier verification system that influences how projects score on the leade…</div>
+  <a class="link" href="https://x.com/avax/status/2064060990443168114" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064060990443168114</div>
+</article><article class="card" id="post-2064060417463242778">
+  <div class="top"><div class="author">MidnightNtwrk</div><div class="time">19:02:06 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">MidnightNtwrk 轉發生態相關內容：RT @itsNikku876: Midnight Sync Udaipur : Wrapped Successfully! Delighted to host the firs</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @itsNikku876: Midnight Sync Udaipur : Wrapped Successfully! Delighted to host the first @MidnightNtwrk Midnight Sync in Udaipur with…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064060417463242778" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064060417463242778</div>
+</article><article class="card" id="post-2064054132323852481">
+  <div class="top"><div class="author">trondao</div><div class="time">18:37:08 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">TRON 強調其低成本高吞吐特性與 USDT 結算角色，並提到 Dune MCP 整合可用自然語言分析鏈上穩定幣活動。</p>
+  <p class="meta">研究筆記：穩定幣結算、Dune MCP 與鏈上資料分析是高訊號主題，適合列入精選追蹤。</p>
+  <div class="orig">The #TRON blockchain is optimized for low-cost, high-throughput transfers, making it a primary settlement layer for USDT activity across global markets. With @Dune&#x27;s MCP server integration, natural language access to on-chain data makes it easier for users, analysts, and builders to explore TRON’s stablecoin activity and understand real-world settlement at scale. Read the full article from @Crypto_Briefing</div>
+  <a class="link" href="https://x.com/trondao/status/2064054132323852481" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064054132323852481</div>
+</article><article class="card" id="post-2064052366962512323">
+  <div class="top"><div class="author">LayerZero_Core</div><div class="time">18:30:07 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">LayerZero 更新 ZRO 回購與供給數據，提到機構與回購吸收供給及投資者解鎖代幣未移動比例。</p>
+  <p class="meta">研究筆記：代幣供給、回購與機構持有變化具市場研究價值。</p>
+  <div class="orig">$112.7M in buybacks. 19.77% of supply taken by institutions + buybacks. 63.8% of investor-unlocked ZRO still unmoved. Read our latest updates:</div>
+  <a class="link" href="https://x.com/LayerZero_Core/status/2064052366962512323" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064052366962512323</div>
+</article><article class="card" id="post-2064051893190729785">
+  <div class="top"><div class="author">avax</div><div class="time">18:28:14 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">avax 轉發生態相關內容：RT @AvaxTeam1: Team1 USA World Cup watch parties are coming to New York &amp; Los Angeles Joi</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @AvaxTeam1: Team1 USA World Cup watch parties are coming to New York &amp; Los Angeles Join us on June 12th for the USA’s opening game…</div>
+  <a class="link" href="https://x.com/avax/status/2064051893190729785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064051893190729785</div>
+</article><article class="card" id="post-2064049776644239405">
+  <div class="top"><div class="author">SeiNetwork</div><div class="time">18:19:49 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">Sei 引用穩定幣數據創高，並提到 Feather 存款接近 6000 萬美元與穩定幣交易量年內高點。</p>
+  <p class="meta">研究筆記：穩定幣活動與鏈上流動性成長是公鏈採用訊號。</p>
+  <div class="orig">Stablecoin mcap at an ATH. Feather deposits nearing $60m. A yearly high for stablecoin volumes. Through any market, stablecoins keep moving on Sei.</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2064049776644239405" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064049776644239405</div>
+</article><article class="card" id="post-2064045930295234574">
+  <div class="top"><div class="author">trondao</div><div class="time">18:04:32 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">trondao 轉發生態相關內容：RT @BlockchainatCU: Looking forward to seeing you at ETHGlobal with TRON!</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @BlockchainatCU: Looking forward to seeing you at ETHGlobal with TRON!</div>
+  <a class="link" href="https://x.com/trondao/status/2064045930295234574" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064045930295234574</div>
+</article><article class="card" id="post-2064045649088127440">
+  <div class="top"><div class="author">solana</div><div class="time">18:03:25 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">solana 轉發生態相關內容：RT @incubator: Missed Friday&#x27;s deadline? We&#x27;ve heard from a number of founders since appl</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @incubator: Missed Friday&#x27;s deadline? We&#x27;ve heard from a number of founders since applications closed. So we&#x27;ve extended the Cohort 5…</div>
+  <a class="link" href="https://x.com/solana/status/2064045649088127440" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064045649088127440</div>
+</article><article class="card" id="post-2064044611362775274">
+  <div class="top"><div class="author">solana</div><div class="time">17:59:18 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">solana 轉發生態相關內容：RT @Collector_Crypt: The best collectibles platforms aren&#x27;t built by financiers. They&#x27;re</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @Collector_Crypt: The best collectibles platforms aren&#x27;t built by financiers. They&#x27;re built by people who know what collectors actually…</div>
+  <a class="link" href="https://x.com/solana/status/2064044611362775274" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064044611362775274</div>
+</article><article class="card" id="post-2064042899164057877">
+  <div class="top"><div class="author">solana</div><div class="time">17:52:29 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">solana 轉發生態相關內容：RT @SolanaEvents: Next week in Chicago: Crypto&#x27;s having a historic year. We&#x27;ve gained reg</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @SolanaEvents: Next week in Chicago: Crypto&#x27;s having a historic year. We&#x27;ve gained regulatory clarity and institutional adoption has gr…</div>
+  <a class="link" href="https://x.com/solana/status/2064042899164057877" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064042899164057877</div>
+</article><article class="card" id="post-2064040773293592829">
+  <div class="top"><div class="author">Optimism</div><div class="time">17:44:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">Optimism 發布 ETHConf 相關活動資訊，包含團隊出席與主舞台時段。</p>
+  <p class="meta">研究筆記：屬社群會議和協議生態曝光資訊。</p>
+  <div class="orig">Find the Optimism team at @ethconf this week. @jinglejamOP and @tyneslol are on the main stage later today at 4:30 ET.</div>
+  <a class="link" href="https://x.com/Optimism/status/2064040773293592829" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064040773293592829</div>
+</article><article class="card" id="post-2064037364054233374">
+  <div class="top"><div class="author">arbitrum</div><div class="time">17:30:30 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">arbitrum 提到可程式化支付或市場基礎設施，聚焦隱私、支付產品與使用者控制權。</p>
+  <p class="meta">研究筆記：支付與可程式化經濟敘事值得納入公鏈應用追蹤。</p>
+  <div class="orig">A new generation of payment products is emerging in the programmable economy. With @anoma V1 on the Arbitrum Platform, users can send, receive and request payments privately instantly. As payments become programmable, businesses can customize how payments work while giving users greater control over their payment privacy.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064037364054233374" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064037364054233374</div>
+</article><article class="card" id="post-2064033608252424473">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">17:15:34 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">RT @EmanAbio: @SuiNetwork Step 1: Confidential amounts Step 2 : Confidential txn parties Step 3. Confidential defi Steps 1 to 3 possib…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064033608252424473" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064033608252424473</div>
+</article><article class="card" id="post-2064032098391105810">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">17:09:34 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">SuiNetwork 提到可程式化支付或市場基礎設施，聚焦隱私、支付產品與使用者控制權。</p>
+  <p class="meta">研究筆記：支付與可程式化經濟敘事值得納入公鏈應用追蹤。</p>
+  <div class="orig">RT @Stablecoin: For stablecoin payments to work at scale, businesses need the same financial privacy they expect from traditional rails, wh…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064032098391105810" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064032098391105810</div>
+</article><article class="card" id="post-2064029071067984257">
+  <div class="top"><div class="author">trondao</div><div class="time">16:57:33 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">trondao 引用一則生態更新：Clarity is on the horizon. Read @DSAForg&#x27;s latest policy update on the evolving global cr</p>
+  <p class="meta">研究筆記：引用內容提供項目或公鏈生態動態，可與原貼脈絡一併追蹤。</p>
+  <div class="orig">Clarity is on the horizon. Read @DSAForg&#x27;s latest policy update on the evolving global crypto landscape.</div>
+  <a class="link" href="https://x.com/trondao/status/2064029071067984257" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064029071067984257</div>
+</article><article class="card" id="post-2064024581632123106">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:39:42 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">SuiNetwork 轉發生態相關內容：RT @trmlabs: TRM Labs is partnering with @SuiNetwork to explore how compliance and risk mo</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @trmlabs: TRM Labs is partnering with @SuiNetwork to explore how compliance and risk monitoring can function within their new confidenti…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064024581632123106" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064024581632123106</div>
+</article><article class="card" id="post-2064024531967389702">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:39:30 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">RT @MerkleScience: 1/ Merkle Science is excited to work with @Mysten_Labs and the @SuiNetwork team as Confidential Transfers enter public b…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064024531967389702" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064024531967389702</div>
+</article><article class="card" id="post-2064024440246251825">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:39:08 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">SuiNetwork 引用一則生態更新：https://t.co/qVHbzlnRRy</p>
+  <p class="meta">研究筆記：引用內容提供項目或公鏈生態動態，可與原貼脈絡一併追蹤。</p>
+  <div class="orig">https://t.co/qVHbzlnRRy</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064024440246251825" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064024440246251825</div>
+</article><article class="card" id="post-2064024368871858392">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:38:51 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">SuiNetwork 引用一則生態更新：https://t.co/upEAMZAdRB</p>
+  <p class="meta">研究筆記：引用內容提供項目或公鏈生態動態，可與原貼脈絡一併追蹤。</p>
+  <div class="orig">https://t.co/upEAMZAdRB</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064024368871858392" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064024368871858392</div>
+</article><article class="card" id="post-2064024189808386244">
+  <div class="top"><div class="author">arbitrum</div><div class="time">16:38:09 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">arbitrum 提到可程式化支付或市場基礎設施，聚焦隱私、支付產品與使用者控制權。</p>
+  <p class="meta">研究筆記：支付與可程式化經濟敘事值得納入公鏈應用追蹤。</p>
+  <div class="orig">programmable markets &gt;</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064024189808386244" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064024189808386244</div>
+</article><article class="card" id="post-2064023203068940713">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">16:34:13 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">0xPolygon 引用一則生態更新：The builder setup Live from MENA Blockchain Week with @ChangeNOW_io</p>
+  <p class="meta">研究筆記：引用內容提供項目或公鏈生態動態，可與原貼脈絡一併追蹤。</p>
+  <div class="orig">The builder setup Live from MENA Blockchain Week with @ChangeNOW_io</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064023203068940713" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064023203068940713</div>
+</article><article class="card" id="post-2064022797924384880">
+  <div class="top"><div class="author">Optimism</div><div class="time">16:32:37 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">quote</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">Optimism 引用一則生態更新：Live now: https://t.co/IxhEHUnOkQ</p>
+  <p class="meta">研究筆記：引用內容提供項目或公鏈生態動態，可與原貼脈絡一併追蹤。</p>
+  <div class="orig">Live now: https://t.co/IxhEHUnOkQ</div>
+  <a class="link" href="https://x.com/Optimism/status/2064022797924384880" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064022797924384880</div>
+</article><article class="card" id="post-2064022400878973075">
+  <div class="top"><div class="author">solana</div><div class="time">16:31:02 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">solana 轉發生態相關內容：RT @superteam: Member Office Hours start this week! Every Wednesday at 2PM UTC Come rant</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @superteam: Member Office Hours start this week! Every Wednesday at 2PM UTC Come rant or ask any question regarding: - marketing sup…</div>
+  <a class="link" href="https://x.com/solana/status/2064022400878973075" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064022400878973075</div>
+</article><article class="card" id="post-2064018155157233774">
+  <div class="top"><div class="author">avax</div><div class="time">16:14:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">avax 轉發生態相關內容：RT @AvaLabs: AI and crypto are both powerful on their own. Combined poorly, they create n</p>
+  <p class="meta">研究筆記：轉發內容作為完整監測留存，若涉及活動、孵化或合作可後續追蹤。</p>
+  <div class="orig">RT @AvaLabs: AI and crypto are both powerful on their own. Combined poorly, they create new risks. Combined well, they can unlock more se…</div>
+  <a class="link" href="https://x.com/avax/status/2064018155157233774" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064018155157233774</div>
+</article><article class="card" id="post-2064017962823278664">
+  <div class="top"><div class="author">LayerZero_Core</div><div class="time">16:13:24 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">original</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">LayerZero 說明與 Cardano 的大型互操作部署路線，將分階段推出端點、Stargate、開發者工具與產品整合。</p>
+  <p class="meta">研究筆記：跨鏈互操作與 Cardano 生態連接屬重大項目路線更新。</p>
+  <div class="orig">Crypto&#x27;s next phase will not be won by isolated ecosystems. The largest interoperability deployment in Cardano&#x27;s history is coming. Earlier this year, we announced that all of crypto would be connected to Cardano via LayerZero, creating a path for over 800 tokens to natively expand into the Cardano ecosystem. The complex technical work will roll out in phases, from testnet and mainnet endpoints, to Stargate, to developer tooling that makes it easy for anyone to deploy, to product integrations across the entire LayerZero stack. By the end of this year, any asset will be able to deploy on Cardano. While this work is in flight, we&#x27;ll be teaming up with the Cardano teams to share more behind the scenes: a detailed roadmap, a deep dive on our partnership, and co-hosted digital and IRL events for the community. We&#x27;re excited for what this work means for both LayerZero and Cardano, and can&#x27;t wait to share more in the coming weeks. A connected Cardano. Done right.</div>
+  <a class="link" href="https://x.com/LayerZero_Core/status/2064017962823278664" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064017962823278664</div>
+</article><article class="card" id="post-2064017874574848391">
+  <div class="top"><div class="author">SonicLabs</div><div class="time">16:13:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">SonicLabs 發布一則 original 更新：REMINDER: This is the only official Sonic Labs account. Any other accounts claiming to represent us</p>
+  <p class="meta">研究筆記：此內容屬最新 List 動態，已納入完整歸檔以便後續研究。</p>
+  <div class="orig">REMINDER: This is the only official Sonic Labs account. Any other accounts claiming to represent us are impersonators. Please stay vigilant and be safe.</div>
+  <a class="link" href="https://x.com/SonicLabs/status/2064017874574848391" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064017874574848391</div>
+</article><article class="card" id="post-2064017315650240668">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:10:50 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">RT @EmanAbio: You can&#x27;t have consumer &amp; institutional adoption at scale without privacy Confidential transfers are NOW LIVE on @SuiNetwork…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064017315650240668" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064017315650240668</div>
+</article><article class="card" id="post-2064016228847677661">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:31 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">Launch partners @Stablecoin, @trmlabs, and @MerkleScience are exploring confidential transfers with the core team and how risk scoring, monitoring, and investigations would function when sensitive financial data isn&#x27;t fully public onchain. Read more ↓ https://blog.sui.io/confidential-transfers-public-beta/</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016228847677661" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016228847677661</div>
+</article><article class="card" id="post-2064016216579293368">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">This removes a structural barrier. Institutions, fintechs, payment platforms &amp; apps that need controlled visibility have a path forward: the upside of a public chain, without exposing flows. Visible where it should be. Confidential where it needs to be. Auditable when required.</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016216579293368" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016216579293368</div>
+</article><article class="card" id="post-2064016204411662720">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:25 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">With this: → Sender/receiver address &amp; token type stay visible as txn occurs → Transfer amounts &amp; balances become confidential → Authorized parties maintain access through defined policies → Audit trails remain intact All while public and private transfers remain as-is.</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016204411662720" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016204411662720</div>
+</article><article class="card" id="post-2064016192285860200">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:22 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">Confidential transfers change that. The amount inside is sealed. People can still see who sent and received the envelope, but not how much. Importantly, the issuer decides who can open the envelope, so an issuer, exchange, or regulator can access important info when needed.</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016192285860200" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016192285860200</div>
+</article><article class="card" id="post-2064016180269240427">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:19 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SuiNetwork 發布一則 reply 更新：Imagine every time you send money, the amount is written on the outside of the envelope – visible to</p>
+  <p class="meta">研究筆記：此內容屬最新 List 動態，已納入完整歸檔以便後續研究。</p>
+  <div class="orig">Imagine every time you send money, the amount is written on the outside of the envelope – visible to anyone passing by. That&#x27;s how most blockchains work today. Every transaction is fully public.</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016180269240427" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016180269240427</div>
+</article><article class="card" id="post-2064016167854112902">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">16:06:16 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 圍繞 confidential transfers 公測說明隱私轉帳、合規可見性、審計與金融工作流應用。</p>
+  <p class="meta">研究筆記：Sui 隱私轉帳公測涉及機構採用、合規與鏈上支付隱私，具持續追蹤價值。</p>
+  <div class="orig">Confidential transfers are live in public beta on Sui Devnet. Transfer amounts and balances are private, with controlled visibility for compliance and auditability. What this means for finance workflows:</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2064016167854112902" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064016167854112902</div>
+</article><article class="card" id="post-2064015863729242304">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">16:05:04 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">0xPolygon 發布一則 reply 更新：solving real world problems with open money stack</p>
+  <p class="meta">研究筆記：此內容屬最新 List 動態，已納入完整歸檔以便後續研究。</p>
+  <div class="orig">solving real world problems with open money stack</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064015863729242304" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064015863729242304</div>
 </article></div>
 </section>
 <section class="section" id="data-driven">
-  <div class="section-head"><h2>Data-driven / 可 QT</h2><span class="count">60 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064630303881343225">
+  <div class="section-head"><h2>Data-driven / 可 QT</h2><span class="count">120 posts</span></div>
+  <div class="grid"><article class="card" id="post-2064692644945788968">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 12:54:21 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 發布穩定幣結算指南，主張可用四層模型把即時終局性、週末支付與低成本結算接入既有支付堆疊。</p>
+  <p class="meta">研究筆記：支付基礎設施與穩定幣結算是高訊號主題，可追蹤 Polygon 如何服務企業支付與 OMS 場景。</p>
+  <div class="orig">Most payment stacks weren&#x27;t built for real-time finality, weekend payouts, or sub-cent settlement. But the fix isn&#x27;t a rebuild.
+
+We put together a guide on the four-layer model for adding stablecoin settlement to the stack you already run.
+
+Download it: https://info.polygon.technology/oms-stablecoins-guide?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=OMS_Stablecoin_Guide_Q2_2026&amp;utm_content=report</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064692644945788968" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064692644945788968</div>
+</article><article class="card" id="post-2064663881457553870">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 11:00:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@solana 宣布 WalletConnect Pay 已在 Solana 上線，展示秒級鏈上日常支付場景。</p>
+  <p class="meta">研究筆記：鏈上支付與錢包支付體驗是 Solana 面向消費級採用的重要訊號，可追蹤後續商戶與交易量。</p>
+  <div class="orig">.@WalletConnect Pay is now live on Solana.
+
+A coffee, paid onchain in seconds.</div>
+  <a class="link" href="https://x.com/solana/status/2064663881457553870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064663881457553870</div>
+</article><article class="card" id="post-2064630303881343225">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-10 08:46:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
   <p class="summary">@BNBCHAIN 轉推 Venus Protocol 固定期限金庫已在 BNB Chain 上線，第一期開放供應資產參與。</p>
@@ -1022,6 +1376,16 @@ Cycle 1 is now open:
 → Supply solana:Es9vMFrzaCERmJfrF4H2FYD4K…</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2064630303881343225" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064630303881343225</div>
+</article><article class="card" id="post-2064618621863931989">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-10 08:00:12 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">@arbitrum 補充 L1 與 L2 架構選擇文章連結，延伸企業鏈部署與市場進入討論。</p>
+  <p class="meta">研究筆記：L1/L2 架構比較對企業採用與生態策略有參考價值，可追蹤 Arbitrum 對企業市場的定位。</p>
+  <div class="orig">Read more into L1 vs L2 here:
+
+https://blog.arbitrum.io/l1-vs-l2-choosing-the-right-chain-architecture-for-your-enterprise/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064618621863931989" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064618621863931989</div>
 </article><article class="card" id="post-2064618608949690862">
   <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-10 08:00:09 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -1086,14 +1450,6 @@ Literally nothing</div>
 Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <a class="link" href="https://x.com/KaiaChain/status/2064566698544619924" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064566698544619924</div>
-</article><article class="card" id="post-2064563189996769640">
-  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-10 04:19:56 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai-agent</span><span class="badge">retweet</span><span class="badge high">high</span></div>
-  <p class="summary">@BNBCHAIN 轉推 BNB Agent SDK，聚焦 AI agent 所需的身份、托管、支付與儲存基礎設施。</p>
-  <p class="meta">研究筆記：AI agent SDK 與鏈上支付、身份和儲存整合是開發者生態的重要基礎設施訊號。</p>
-  <div class="orig">RT @BNBChainDevs: Before the BNB Agent SDK, every team building an AI agent had to wire up identity, escrow, payments and storage from scra…</div>
-  <a class="link" href="https://x.com/BNBCHAIN/status/2064563189996769640" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2064563189996769640</div>
 </article><article class="card" id="post-2064556666105028815">
   <div class="top"><div class="author">@KaiaChain</div><div class="time">2026-06-10 03:54:01 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -1134,6 +1490,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Agents can now settle payments on X Layer and access data across 140+ networks via x402 on @Quicknode. No accounts or API keys required.</div>
   <a class="link" href="https://x.com/XLayerOfficial/status/2064537371622985859" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064537371622985859</div>
+</article><article class="card" id="post-2064500406710071741">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">2026-06-10 00:10:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@SeiNetwork 發布 infrastructure 相關更新：RT @SeiNetwork: The modern economy is one where anything of value has a market. These are</p>
+  <p class="meta">研究筆記：Sei 持續強調交易與市場基礎設施定位，可追蹤機構與開發者採用。</p>
+  <div class="orig">RT @SeiNetwork: The modern economy is one where anything of value has a market. These are the institutions, builders, and traders powering…</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2064500406710071741" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064500406710071741</div>
 </article><article class="card" id="post-2064486609320374465">
   <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 23:15:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -1142,6 +1506,30 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @yrschrade: Arcium Mainnet Alpha just passed 1,000,000 confidential computations today! The fastest growing confidential computing netw…</div>
   <a class="link" href="https://x.com/solana/status/2064486609320374465" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064486609320374465</div>
+</article><article class="card" id="post-2064475159839305942">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 22:30:08 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推 Delta Neutral Arbitrage 策略上線，涉及 Solana 生態交易產品。</p>
+  <p class="meta">研究筆記：DeFi 策略產品上線，可觀察交易策略與收益產品需求。</p>
+  <div class="orig">RT @TradeNeutral: Introducing Delta Neutral Arbitrage! A market-neutral arbitrage strategy curated by Velox Trading Group, now live on Neu…</div>
+  <a class="link" href="https://x.com/solana/status/2064475159839305942" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064475159839305942</div>
+</article><article class="card" id="post-2064444608105595060">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-09 20:28:44 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 說明 Open Money Stack 的 smart sessions，可用一次批准支援訂閱、支付與結帳等非託管錢包場景。</p>
+  <p class="meta">研究筆記：支付、錢包與授權體驗是鏈上採用的重要入口，值得追蹤實際整合與用戶轉換。</p>
+  <div class="orig">Every payment needs a wallet signature. Fine for a one-off purchase. For subscriptions, payouts, and checkouts, every additional prompt loses customers. Smart sessions fix that with one approval. How it works on the wallet layer of the Open Money Stack: https://polygon.technology/blog/run-recurring-subscriptions-payouts-and-checkouts-on-a-non-custodial-wallet-with-one-customer-approval-via-the-open-money-stack</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064444608105595060" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064444608105595060</div>
+</article><article class="card" id="post-2064444553604522010">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 20:28:31 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推 Loopscale Earn 上線，主打固定收益、借貸、循環與多場域執行的一站式金庫。</p>
+  <p class="meta">研究筆記：Solana 生態 DeFi 收益產品上線，可觀察固定收益、借貸與多場域執行需求。</p>
+  <div class="orig">RT @Loopscale: Loopscale Earn is live. Curated Vaults that package fixed yield, lending, looping, and multi-venue execution into a single…</div>
+  <a class="link" href="https://x.com/solana/status/2064444553604522010" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064444553604522010</div>
 </article><article class="card" id="post-2064437412235801001">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-09 20:00:09 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1166,6 +1554,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @MorganKrupetsky: More private credit is coming to Avalanche. https://trad.fi/ is bringing up to $650M in private credit onto pr…</div>
   <a class="link" href="https://x.com/avax/status/2064420014174982440" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064420014174982440</div>
+</article><article class="card" id="post-2064407452876251500">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">2026-06-09 18:01:06 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@SeiNetwork 發布 Sei Giga 敘事，主打為機構、開發者與交易者擴展市場基礎設施。</p>
+  <p class="meta">研究筆記：高性能交易與市場基礎設施是 Sei 的核心定位，適合追蹤後續產品與採用數據。</p>
+  <div class="orig">The modern economy is one where anything of value has a market. These are the institutions, builders, and traders powering it. Sei Giga is where they will scale it.</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2064407452876251500" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064407452876251500</div>
 </article><article class="card" id="post-2064401915723784272">
   <div class="top"><div class="author">@avax</div><div class="time">2026-06-09 17:39:06 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -1190,6 +1586,30 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @BitgetWallet: $13M of $SPCXx fully subscribed in 30 min. Thank you to everyone for their interest in subscribing to SpaceX IPO tokeniz…</div>
   <a class="link" href="https://x.com/solana/status/2064393388405760336" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064393388405760336</div>
+</article><article class="card" id="post-2064388817017250004">
+  <div class="top"><div class="author">@avax</div><div class="time">2026-06-09 16:47:03 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@avax 轉推 Bundie 與 Avalanche 相關 DeFi 收益策略整合，展示多協議、多鏈收益入口。</p>
+  <p class="meta">研究筆記：DeFi 聚合與收益策略工具可觀察 Avalanche 生態應用擴張與用戶入口變化。</p>
+  <div class="orig">RT @BundieDefi: Bundie × Avalanche Bundie bundles yield-generating strategies across multiple protocols and chains into a single interface…</div>
+  <a class="link" href="https://x.com/avax/status/2064388817017250004" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064388817017250004</div>
+</article><article class="card" id="post-2064379313273651419">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 16:09:17 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推 Archer Exchange 現貨訂單簿與 Jito BAM 相關升級，指向交易基礎設施改進。</p>
+  <p class="meta">研究筆記：訂單簿交易、Jito 生態與 Maker Priority 等功能可作為 Solana DeFi 基礎設施追蹤線索。</p>
+  <div class="orig">RT @ArcherExchange_: The orderbooks leveled up Archer is the first spot exchange powered by @jito_sol BAM! With Maker Priority plugin,…</div>
+  <a class="link" href="https://x.com/solana/status/2064379313273651419" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064379313273651419</div>
+</article><article class="card" id="post-2064374440226390182">
+  <div class="top"><div class="author">@LayerZero_Core</div><div class="time">2026-06-09 15:49:55 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">interoperability</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">@LayerZero_Core 引用跨鏈互操作或多鏈資料相關更新，呈現跨鏈訊息、交易量或支付網路的基礎設施進展。</p>
+  <p class="meta">研究筆記：跨鏈資料與互操作基礎設施有助於衡量多鏈活動與資金流，具研究價值。</p>
+  <div class="orig">Cross-chain data has always been complex to track and measure. As more value flows through crypto, good data is that much more important. The new Interoperability Dashboard from @AlliumLabs provides a standardized view of cross-chain volume, messages, market share and user activity among GMPs.</div>
+  <a class="link" href="https://x.com/LayerZero_Core/status/2064374440226390182" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064374440226390182</div>
 </article><article class="card" id="post-2064366531991974313">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-09 15:18:29 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1214,6 +1634,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Meet UpTop: a digital goods marketplace built by @overtake_world and powered by Sui. Buy gift cards, in-game currency, mobile top-ups, and much more to come, all with stablecoins. Pay in USDC on Sui and get 3% off at checkout. Try it now https://uptop.gg/sui?utm_source=sui_twitter</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2064361134124339665" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064361134124339665</div>
+</article><article class="card" id="post-2064359779087118623">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-09 14:51:39 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@0xPolygon 轉推基礎設施或開發者工具更新，對生態應用與代理工作流具追蹤價值。</p>
+  <p class="meta">研究筆記：基礎設施與工具更新可追蹤開發者採用、代理支付與應用搭建能力。</p>
+  <div class="orig">RT @Quicknode: BIG UPDATE: 1,000,000 free RPC requests per month, per agent, are now available via x402 on Quicknode. No account, no API k...</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064359779087118623" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064359779087118623</div>
+</article><article class="card" id="post-2064354947718619536">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 14:32:28 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推基礎設施或開發者工具更新，對生態應用與代理工作流具追蹤價值。</p>
+  <p class="meta">研究筆記：基礎設施與工具更新可追蹤開發者採用、代理支付與應用搭建能力。</p>
+  <div class="orig">RT @Alchemy: Sadly, an AI agent with an empty wallet can&#x27;t do anything onchain. BUT NOW you can fund an Agent Wallet without leaving the Al...</div>
+  <a class="link" href="https://x.com/solana/status/2064354947718619536" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064354947718619536</div>
 </article><article class="card" id="post-2064343028765016409">
   <div class="top"><div class="author">@Optimism</div><div class="time">2026-06-09 13:45:06 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -1246,6 +1682,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @solflare: xStocks just expanded in Solflare. 133 tokenized stocks and ETFs in one Market view, next to your other Solana assets. Find...</div>
   <a class="link" href="https://x.com/solana/status/2064339173058679196" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064339173058679196</div>
+</article><article class="card" id="post-2064338691477148025">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-09 13:27:52 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">interoperability</span><span class="badge">retweet</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 轉推跨鏈互操作或多鏈資料相關更新，呈現跨鏈訊息、交易量或支付網路的基礎設施進展。</p>
+  <p class="meta">研究筆記：跨鏈資料與互操作基礎設施有助於衡量多鏈活動與資金流，具研究價值。</p>
+  <div class="orig">RT @WalletConnect: LIVE: WalletConnect Pay keeps growing. You can now pay with ETH on @ethereum, @Optimism, @arbitrum, @base, and @0xPolyg...</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064338691477148025" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064338691477148025</div>
 </article><article class="card" id="post-2064338076655288472">
   <div class="top"><div class="author">@trondao</div><div class="time">2026-06-09 13:25:25 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">rwa</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -1286,6 +1730,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @RWAFoundation_: - @avax RWA transfer volume is up a staggering 11,700% in the last 30 days.</div>
   <a class="link" href="https://x.com/avax/status/2064331152484442254" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064331152484442254</div>
+</article><article class="card" id="post-2064317179823063415">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 12:02:23 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Solana 轉推 Mercuryo 更新，稱其 Solana 入金量今年成長 100%，反映用戶將 Solana 作為進入加密市場的常用鏈。</p>
+  <p class="meta">研究筆記：入金通道成長可作為 Solana 零售採用與支付入口需求的觀察指標。</p>
+  <div class="orig">RT @Mercuryo_io: Mercuryo on-ramp volume on @solana are up 100% this year. Our users choose Solana as a go-to chain to explore crypto, and…</div>
+  <a class="link" href="https://x.com/solana/status/2064317179823063415" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064317179823063415</div>
 </article><article class="card" id="post-2064260421700473202">
   <div class="top"><div class="author">@KaiaChain</div><div class="time">2026-06-09 08:16:51 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1310,6 +1762,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Settlement is the actual endgame. Most of the noise has always been about trading, but when the back office moves to stablecoins, that&#x27;s when we&#x27;ll see true change. For us in Asia, that looks like replacing legacy FX corridors with instant, 24/7 settlement.</div>
   <a class="link" href="https://x.com/KaiaChain/status/2064217368944120187" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064217368944120187</div>
+</article><article class="card" id="post-2064207442880372870">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-09 04:46:20 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 轉推 four.meme 的 OpenFour 介紹，顯示其從單一 meme launchpad 走向開放、模組化基礎設施。</p>
+  <p class="meta">研究筆記：BNB Chain 轉推 four.meme 的 OpenFour 升級，涉及 meme launchpad 向開放模組化基礎設施演進，對 BNB 生態項目發行與交易工具有追蹤價值。</p>
+  <div class="orig">RT @fourdotmemezh: Introducing OpenFour — https://four.meme/en is evolving from a single meme launchpad into open, modular infrastructur…</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2064207442880372870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064207442880372870</div>
 </article><article class="card" id="post-2064110279634358400">
   <div class="top"><div class="author">solana</div><div class="time">22:20:14 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -1326,14 +1786,30 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @RWAFoundation_: - @solana RWA holders now up over 27% to 271k.</div>
   <a class="link" href="https://x.com/solana/status/2063556930694484423" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2063556930694484423</div>
-</article><article class="card" id="post-2063078458272453018">
-  <div class="top"><div class="author">BNBCHAIN</div><div class="time">02:00:09 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai-agent</span><span class="badge">original</span><span class="badge high">high</span></div>
-  <p class="summary">BNB Chain 提醒 Agent Survival Pack 的免費 BNB credits 申領剩 2 天，主軸是讓 AI agent 能自行支付模型、管理錢包並自主運行。</p>
-  <p class="meta">研究筆記：BNB Chain 提醒 Agent Survival Pack 的免費 BNB credits 申領剩 2 天，主軸是讓 AI agent 能自行支付模型、管理錢包並自主運行。</p>
-  <div class="orig">2 days left to claim free BNB credits with the Agent Survival Pack. Build an AI agent that pays for its own models, manages its own wallet, and runs while you sleep. Try it https://www.bnbchain.org/en/blog/autonomous-agents-need-autonomous-payments-agent-survival-pack</div>
-  <a class="link" href="https://x.com/BNBCHAIN/status/2063078458272453018" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2063078458272453018</div>
+</article><article class="card" id="post-2063259143147040963">
+  <div class="top"><div class="author">avax</div><div class="time">13:58:07 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">rwa</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">Avalanche 轉推 RWA Foundation 對 Avalanche RWA 生態的正面觀察，延續其真實世界資產敘事曝光。</p>
+  <p class="meta">研究筆記：Avalanche 原生轉推 RWA Foundation 訊息，顯示 RWA 仍是 Avalanche 生態對外溝通重點之一。</p>
+  <div class="orig">RT @RWAFoundation_: - @avax RWA’s looking good.</div>
+  <a class="link" href="https://x.com/avax/status/2063259143147040963" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063259143147040963</div>
+</article><article class="card" id="post-2063245830987939991">
+  <div class="top"><div class="author">solana</div><div class="time">13:05:14 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 轉推 SuperteamAE 關於 Kosh Money 的訊息，主軸是用 USD 帳戶改善亞洲自由工作者的收款與結算。</p>
+  <p class="meta">研究筆記：Solana 生態支付與跨境收款工具訊號，指向自由工作者市場和穩定幣結算需求。</p>
+  <div class="orig">RT @SuperteamAE: Asia&#x27;s freelance market is booming. But payouts haven&#x27;t caught up. @koshmoney is changing that with USD accounts that sett…</div>
+  <a class="link" href="https://x.com/solana/status/2063245830987939991" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063245830987939991</div>
+</article><article class="card" id="post-2063052502942052785">
+  <div class="top"><div class="author">avax</div><div class="time">00:17:01 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Avalanche 轉推 EXTRA SAFE 關於 Universal Gateway 的穩定幣支付訊息，主軸是跨鏈支付體驗簡化。</p>
+  <p class="meta">研究筆記：Avalanche 轉推 EXTRA SAFE 關於 Universal Gateway 的穩定幣支付訊息，主軸是跨鏈支付體驗簡化。</p>
+  <div class="orig">RT @EXTRA_SAFE_CHAT: Stablecoin payments should feel simple, no matter what chain they touch. EXTRA SAFE is launching the Universal Gatewa…</div>
+  <a class="link" href="https://x.com/avax/status/2063052502942052785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063052502942052785</div>
 </article><article class="card" id="post-2063040062884139146">
   <div class="top"><div class="author">SuiNetwork</div><div class="time">23:27:35 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1342,6 +1818,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">https://t.co/xoE1bLmduE</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2063040062884139146" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2063040062884139146</div>
+</article><article class="card" id="post-2063006188241830104">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">21:12:58 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Polygon 轉推 Stabledash 對其支付負責人分享 Open Money Stack 的內容，突顯以 2.5 億美元收購整合開放支付堆疊的敘事。</p>
+  <p class="meta">研究筆記：Polygon 轉推 Stabledash 對其支付負責人分享 Open Money Stack 的內容，突顯以 2.5 億美元收購整合開放支付堆疊的敘事。</p>
+  <div class="orig">RT @stabledash: $250M in acquisitions to build one open payments stack. @proofofjamal, Head of Payments at @0xPolygon, shared the Open Mon…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2063006188241830104" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063006188241830104</div>
 </article><article class="card" id="post-2063005563550826668">
   <div class="top"><div class="author">solana</div><div class="time">21:10:29 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1374,6 +1858,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Still paying gas as overhead for your business? Dealing with complex accounting? Gasless stablecoin transfers on Sui. Stop managing gas. Start managing your business.</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2062990682256765280" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062990682256765280</div>
+</article><article class="card" id="post-2062987839017504876">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">20:00:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">Polygon 宣傳 Open Money Stack 的意圖式跨鏈支付路由，主軸是讓使用者只看到一次付款確認，底層自動處理跨鏈、橋接與場館路由。</p>
+  <p class="meta">研究筆記：Polygon 宣傳 Open Money Stack 的意圖式跨鏈支付路由，主軸是讓使用者只看到一次付款確認，底層自動處理跨鏈、橋接與場館路由。</p>
+  <div class="orig">Your user taps pay. They see one confirmation. The dollar crosses whatever chains, bridges, and venues it needs to. They never see any of it. This is how payments work on the Open Money Stack: https://polygon.technology/learn/payment/how-intent-based-payment-routing-works-for-cross-chain-money-movement</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062987839017504876" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062987839017504876</div>
 </article><article class="card" id="post-2062984977248055749">
   <div class="top"><div class="author">SuiNetwork</div><div class="time">19:48:41 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1390,6 +1882,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">200K TPS. Sei Giga is infrastructure for the modern economy.</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062955987561222208" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062955987561222208</div>
+</article><article class="card" id="post-2062953776445522240">
+  <div class="top"><div class="author">solana</div><div class="time">17:44:42 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">Solana 轉推 Solana Payments 文章連結，延續其支付應用與商業場景敘事。</p>
+  <p class="meta">研究筆記：Solana 轉推 Solana Payments 文章連結，延續其支付應用與商業場景敘事。</p>
+  <div class="orig">RT @solanapayments: https://x.com/i/article/2062167960580435970</div>
+  <a class="link" href="https://x.com/solana/status/2062953776445522240" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062953776445522240</div>
 </article><article class="card" id="post-2062929167914598627">
   <div class="top"><div class="author">solana</div><div class="time">16:06:55 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1398,6 +1898,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @vibhu: Historic day for @solana: For the first time ever, HYPE did more spot volume on Solana than all centralized exchanges in the la…</div>
   <a class="link" href="https://x.com/solana/status/2062929167914598627" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062929167914598627</div>
+</article><article class="card" id="post-2062914843334541376">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:10:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">Polygon 宣布 Bitso 已上線 Polygon 上的 USDC 支付，延伸其穩定幣支付與拉美金融應用敘事。</p>
+  <p class="meta">研究筆記：Polygon 宣布 Bitso 已上線 Polygon 上的 USDC 支付，延伸其穩定幣支付與拉美金融應用敘事。</p>
+  <div class="orig">USDC payments on Polygon are live on @Bitso</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062914843334541376" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062914843334541376</div>
 </article><article class="card" id="post-2062871652082610213">
   <div class="top"><div class="author">solana</div><div class="time">12:18:00 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">rwa</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1406,6 +1914,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Backpack Securities Quoting @Backpack’s video announcement about on/off-ramping tokenized securities between traditional brokers and Solana.</div>
   <a class="link" href="https://x.com/solana/status/2062871652082610213" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062871652082610213</div>
+</article><article class="card" id="post-2062869823798075541">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">12:11:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">Polygon 發布「one API to move money on-chain」短訊，延續其鏈上資金移動與開發者 API 敘事。</p>
+  <p class="meta">研究筆記：Polygon 發布「one API to move money on-chain」短訊，延續其鏈上資金移動與開發者 API 敘事。</p>
+  <div class="orig">&quot;one API to move money on-chain&quot;</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062869823798075541" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062869823798075541</div>
+</article><article class="card" id="post-2062809419247681765">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">08:11:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">Sui 對比 SWIFT 與其鏈上結算能力，強調低成本、近即時、全球 24/7 的資金移動敘事。</p>
+  <p class="meta">研究筆記：Sui 對比 SWIFT 與其鏈上結算能力，強調低成本、近即時、全球 24/7 的資金移動敘事。</p>
+  <div class="orig">SWIFT was built for another era. Sui settles in &lt;1 sec for $0. Global. 24/7. This is what money movement should feel like.</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2062809419247681765" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062809419247681765</div>
 </article><article class="card" id="post-2062721249802064027">
   <div class="top"><div class="author">SeiNetwork</div><div class="time">02:20:44 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1422,6 +1946,38 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">@Alchemy is officially a member of the @KaiaChain Governance Council. Powering infrastructure for Visa and Stripe, Alchemy brings institutional-grade support to Kaia, playing a key role in our mission to scale onchain finance while driving our technical roadmap forward.</div>
   <a class="link" href="https://x.com/KaiaChain/status/2062685846797750708" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062685846797750708</div>
+</article><article class="card" id="post-2062655678745817129">
+  <div class="top"><div class="author">BNBCHAIN</div><div class="time">22:00:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">BNBCHAIN 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：BNBCHAIN 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Another private payment option is now available for users on BNB Chain. @AnomaPay V1 lets users hold, transfer, and pay with crypto without exposing their balance or transaction history publicly. Note: This post is for informational purposes only and not financial advice. DYOR.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062655678745817129" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062655678745817129</div>
+</article><article class="card" id="post-2062652368454316220">
+  <div class="top"><div class="author">Optimism</div><div class="time">21:47:01 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">Optimism 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：Optimism 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Liquidity shouldn&#x27;t care which chain it lives on. The 0x Cross-Chain API puts 12+ bridges behind one integration, so value moves to where it&#x27;s needed. OP Stack is one of them. Good luck to the team.</div>
+  <a class="link" href="https://x.com/Optimism/status/2062652368454316220" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062652368454316220</div>
+</article><article class="card" id="post-2062647624642199982">
+  <div class="top"><div class="author">XLayerOfficial</div><div class="time">21:28:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">thread</span><span class="badge high">high</span></div>
+  <p class="summary">XLayerOfficial 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：XLayerOfficial 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Uniswap V4 Hooks Winners: First Place - @Eulr_Official Eulr is a fair token launchpad with no presales &amp; team allocations, where onchain rules prevent price crashes. Second Place - @HatchAI_App, @PolicyPoolHQ HatchAI is token launchpad that automatically protects new projects from sniper bots and whale dumps through built-in pool-level safeguards. PolicyPool is a trading pool with programmable rules, where oversized trades either get blocked or are routed through a mechanism that rewards liquidity providers first. Third Place - @FanVibeOnX, @4lpha_agent, @RouletteSwap FanVibe Hook is a World Cup prediction market that connects fan activity directly to DeFi liquidity behavior in real time. 4lpha AI is an AI agent that manages your liquidity positions autonomously, rebalancing and compounding within the risk limits you set. RouletteSwap is a trading pool where users can opt into a high-variance fee structure, paying the same expected cost over time, with a chance at near-zero fees or a big spike. (3/4)</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2062647624642199982" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062647624642199982</div>
+</article><article class="card" id="post-2062647612591976496">
+  <div class="top"><div class="author">XLayerOfficial</div><div class="time">21:28:07 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">thread</span><span class="badge high">high</span></div>
+  <p class="summary">XLayerOfficial 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：XLayerOfficial 發布穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">X Cup Winners: First Place - @Billion_Global Billion Live lets you watch live traders and copy their moves in one tap, without leaving the stream. Second Place - @ShieldSuite_, @PlayWorldXI ShieldSuite is a no-loss World Cup player speculation platform where deposits stay safe in yield while an AI agent trades player shares on your behalf. WorldXI lets you build your dream World Cup squad onchain, earn points based on real match performance, and compete on a fully transparent leaderboard. Third Place - @choice_markets, @cupfolio, @Polygoal_market Choice Market turns any trending topic or social debate into a tradeable prediction market instantly. CupFolio is an AI-managed portfolio that autonomously optimizes your World Cup predictions like a fund. Polygoal is a decentralized World Cup prediction market where fans predict match outcomes and exact scores, with trustless settlements. (2/4)</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2062647612591976496" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062647612591976496</div>
 </article><article class="card" id="post-2062642524687106243">
   <div class="top"><div class="author">solana</div><div class="time">21:07:54 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1430,6 +1986,30 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @craftsdev: Access private startup equity on Solana. First ICO ends tomorrow, $ENRGY will be liquid Day 1.</div>
   <a class="link" href="https://x.com/solana/status/2062642524687106243" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062642524687106243</div>
+</article><article class="card" id="post-2062638927937257534">
+  <div class="top"><div class="author">ethereum</div><div class="time">20:53:37 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">ethereum 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：ethereum 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @ethereum_mexico: ONLINE HACKATHON AI × Blockchain × Payments $10,000*+ USD in prizes Register, access resources, the hacker guide,…</div>
+  <a class="link" href="https://x.com/ethereum/status/2062638927937257534" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062638927937257534</div>
+</article><article class="card" id="post-2062637783064166535">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">20:49:04 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @DianaChimes: A sneak peek into what the Polygon team has been building. Polygon open money stack/ ├-- on-ramps ├-- wallets ├-- KYC/KYB…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062637783064166535" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062637783064166535</div>
+</article><article class="card" id="post-2062637734158598487">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">20:48:52 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推穩定幣、支付、跨鏈流動性或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @0xMarcB: A first look at what the team has been working on. @0xPolygon Open Money Stack is now in technical preview with a handful of…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062637734158598487" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062637734158598487</div>
 </article><article class="card" id="post-2062635748004966587">
   <div class="top"><div class="author">SeiNetwork</div><div class="time">20:40:58 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1438,6 +2018,70 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @SeiNetwork: Over 50% of U.S. equity volume now trades in dark pools or off-exchange. In TradFi, private execution is critical market s…</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062635748004966587" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062635748004966587</div>
+</article><article class="card" id="post-2062604860999020622">
+  <div class="top"><div class="author">trondao</div><div class="time">18:38:14 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">trondao 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：trondao 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Understanding stablecoin data should be simple. With @Dune MCP, users can now explore #TRON activity directly through natural language, making onchain data easier to access and query.</div>
+  <a class="link" href="https://x.com/trondao/status/2062604860999020622" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062604860999020622</div>
+</article><article class="card" id="post-2062597100794208735">
+  <div class="top"><div class="author">solana</div><div class="time">18:07:24 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">solana 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：solana 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @paj_cash: PAJ v2 is officially live!: https://paj.cash We’re changing everything about how you move money on-chain. Your bank…</div>
+  <a class="link" href="https://x.com/solana/status/2062597100794208735" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062597100794208735</div>
+</article><article class="card" id="post-2062595236392849453">
+  <div class="top"><div class="author">Optimism</div><div class="time">18:00:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">Optimism 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：Optimism 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">A new institutional-grade stablecoin is now live on OP Mainnet, giving developers and institutions greater access to compliant, USD-backed liquidity.</div>
+  <a class="link" href="https://x.com/Optimism/status/2062595236392849453" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062595236392849453</div>
+</article><article class="card" id="post-2062590865051210238">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">17:42:37 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @usetoku: Congrats to the @0xPolygon team on the Open Money Stack launch! Proud to see them continue pushing the ecosystem forward.</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062590865051210238" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062590865051210238</div>
+</article><article class="card" id="post-2062590248681361500">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">17:40:11 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @0xAishwary: We have been working under the hood to bring everything together. If we have to make on-chain payments seamless, it&#x27;s the o…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062590248681361500" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062590248681361500</div>
+</article><article class="card" id="post-2062589218543501644">
+  <div class="top"><div class="author">trondao</div><div class="time">17:36:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">trondao 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：trondao 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Great conversation with @KoloHub on stablecoins, AI agents, and why TRON continues to be a core settlement layer for global value movement. Watch below.</div>
+  <a class="link" href="https://x.com/trondao/status/2062589218543501644" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062589218543501644</div>
+</article><article class="card" id="post-2062582873996009763">
+  <div class="top"><div class="author">SuiNetwork</div><div class="time">17:10:52 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge">medium</span></div>
+  <p class="summary">SuiNetwork 轉推DeFi、RWA 或鏈上金融相關內容，具市場與應用追蹤價值。</p>
+  <p class="meta">研究筆記：SuiNetwork 轉推DeFi、RWA 或鏈上金融相關內容，具市場與應用追蹤價值。</p>
+  <div class="orig">RT @Mysten_Labs: bitcoin:native&#x27;s programmability problem has a solution; Hashi. @b1ackd0g sits down with @isabelfoxenduke to break down M…</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2062582873996009763" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062582873996009763</div>
+</article><article class="card" id="post-2062576615612125601">
+  <div class="top"><div class="author">arbitrum</div><div class="time">16:46:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">arbitrum 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：arbitrum 發布穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">Applications for Founder House London are now open. Founder House is a three-day, in-person builder program starting on July 10th designed for founders looking to launch their business on the Arbitrum Platform. Selected teams will get: - Opportunity to compete for $300K in prizes + grants - Access to infrastructure, product and GTM support - Mentorship from @RobinhoodApp Chain, @awscloud, @Offchain, Arbitrum Foundation and industry leaders If you&#x27;re building programmable payments, RWAs, DeFi, AI, privacy or consumer apply below.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062576615612125601" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062576615612125601</div>
 </article><article class="card" id="post-2062576480887116229">
   <div class="top"><div class="author">avax</div><div class="time">16:45:28 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1446,6 +2090,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @MorganKrupetsky: RWA market cap on Avalanche is up nearly 12% over the past 30 days. Distributed RWA market cap is up 22%+. This is ju…</div>
   <a class="link" href="https://x.com/avax/status/2062576480887116229" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062576480887116229</div>
+</article><article class="card" id="post-2062575626431733764">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">16:42:04 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推穩定幣、支付或資金流動基礎設施相關進展，值得追蹤採用與合作。</p>
+  <div class="orig">RT @sandeepnailwal: Money should move the way information moves. for years the rails just werent built for it. thats the whole reason we&#x27;v…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062575626431733764" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062575626431733764</div>
 </article><article class="card" id="post-2062573153595875665">
   <div class="top"><div class="author">ethereum</div><div class="time">16:32:15 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1454,6 +2106,102 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @LindaJeng1: Yesterday, we ran what may be the first DeFi borrowing transaction ever conducted on Capitol Hill. Senate staffers watche…</div>
   <a class="link" href="https://x.com/ethereum/status/2062573153595875665" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062573153595875665</div>
+</article><article class="card" id="post-2062564866980729235">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:59:19 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">RT @jameslawton: Took a lot of work under the hood to get to this point, but we&#x27;re one step closer to a step-level change in how money move…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062564866980729235" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062564866980729235</div>
+</article><article class="card" id="post-2062562561686688088">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:50:09 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">Programmable money.</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062562561686688088" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062562561686688088</div>
+</article><article class="card" id="post-2062562553318777032">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:50:07 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">RT @john3gan: Building the Open Money Stack here at @0xPolygon has been a labor of love for me and the whole company. We&#x27;re here to creat…</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062562553318777032" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062562553318777032</div>
+</article><article class="card" id="post-2062558472814915963">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:33:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">one API for global money movement</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062558472814915963" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062558472814915963</div>
+</article><article class="card" id="post-2062555347957715296">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:21:30 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">all money on-chain</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062555347957715296" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062555347957715296</div>
+</article><article class="card" id="post-2062554536691343433">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">15:18:16 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">for global payments</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062554536691343433" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062554536691343433</div>
+</article><article class="card" id="post-2062549017872216260">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:56:20 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">One open stack to move money globally, in seconds. Learn more: https://polygon.technology/blog/polygon-open-money-stack-enters-technical-preview</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062549017872216260" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062549017872216260</div>
+</article><article class="card" id="post-2062549005549425122">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:56:17 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">We&#x27;re onboarding a small group of partners before expanding access. If you&#x27;re building something that moves money, request early access: https://info.polygon.technology/get-early-access?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=oms_tech_preview&amp;utm_content=form</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062549005549425122" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062549005549425122</div>
+</article><article class="card" id="post-2062548975279079757">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:56:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">The core loop: money comes in as cash or a bank wire, converts to stablecoins, moves where it needs to go, and comes back out as fiat. Settlements that used to take days now take minutes. Fees that used to cost dollars now cost fractions of a penny.</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062548975279079757" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062548975279079757</div>
+</article><article class="card" id="post-2062548904818917537">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:55:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">Open Money Stack is payments infrastructure that lets you accept deposits, provision wallets, move stablecoins, and off-ramp to bank accounts or cash through one integrated platform. Build a payments product without stitching together five different vendors.</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062548904818917537" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062548904818917537</div>
+</article><article class="card" id="post-2062548885378351465">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:55:49 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">Your business wants to move money at the speed of the internet. But your infra can’t be replaced overnight. Polygon OMS integrates into your existing flows through one API. No rebuild. Built on battle-tested rails by the only team that controls the full vertical stack.</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062548885378351465" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062548885378351465</div>
+</article><article class="card" id="post-2062548856890658837">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">14:55:42 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：0xPolygon 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">Polygon Open Money Stack is now in technical preview. A first look at how your business can move money with stablecoins in one easy platform</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062548856890658837" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062548856890658837</div>
 </article><article class="card" id="post-2062544551630274891">
   <div class="top"><div class="author">solana</div><div class="time">14:38:35 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">rwa</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -1462,6 +2210,38 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @by_olesia: the reason why @onrefinance is so successful is because they offer what others don’t: - asset that doesn’t depend on crypt…</div>
   <a class="link" href="https://x.com/solana/status/2062544551630274891" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062544551630274891</div>
+</article><article class="card" id="post-2062535747656421833">
+  <div class="top"><div class="author">Ripple</div><div class="time">14:03:36 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">Ripple 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：Ripple 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">$RLUSD is institutional-grade infrastructure for payments and tokenization. Through @wormhole’s Native Token Transfers (NTT), $RLUSD can now move natively across multiple blockchain ecosystems, supporting cross-border payments, institutional on/off-ramps, and tokenization use cases. For developers and institutions building onchain, that expands access to compliant, USD-backed liquidity across supported networks.</div>
+  <a class="link" href="https://x.com/Ripple/status/2062535747656421833" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062535747656421833</div>
+</article><article class="card" id="post-2062532726771609662">
+  <div class="top"><div class="author">arbitrum</div><div class="time">13:51:36 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
+  <p class="summary">arbitrum 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：arbitrum 轉推支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">RT @CoinMarketCap: @Canza_Finance, @arbitrum, and @Tevau_Official partner to bring USDT0 spending power to Africa&#x27;s cross-border traders.…</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062532726771609662" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062532726771609662</div>
+</article><article class="card" id="post-2062522167137632431">
+  <div class="top"><div class="author">avax</div><div class="time">13:09:39 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">avax 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <p class="meta">研究筆記：avax 發布支付、穩定幣或代幣化金融基礎設施相關內容，值得追蹤其採用與合作進展。</p>
+  <div class="orig">Exposure to crypto is one thing. Building structure for serious capital to hold it, manage it, and participate is another. @gbartsmith knows it, from Susquehanna’s crypto desk to strategy &amp; capital deployment at @avat_co. And he&#x27;s speaking at Summit: https://www.avalanchesummit.com/ He brings a Wall Street market structure lens to blockchain&#x27;s most important open question: How does a speculative asset class become institutional financial infrastructure? That conversation is happening at Avalanche Summit. Sept 16-17 in New York City.</div>
+  <a class="link" href="https://x.com/avax/status/2062522167137632431" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062522167137632431</div>
+</article><article class="card" id="post-2062507986048995649">
+  <div class="top"><div class="author">0xPolygon</div><div class="time">12:13:18 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge">medium</span></div>
+  <p class="summary">Polygon 強調透過其網路提供全球支付或金融軌道，屬基礎設施定位訊號。</p>
+  <p class="meta">研究筆記：Polygon 強調透過其網路提供全球支付或金融軌道，屬基礎設施定位訊號。</p>
+  <div class="orig">global rails via Polygon</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062507986048995649" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062507986048995649</div>
 </article><article class="card" id="post-2062444350089671165">
   <div class="top"><div class="author">KaiaChain</div><div class="time">08:00:26 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -1494,6 +2274,62 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Gold has always been a store of value. Now, it can work harder on BNB Chain. @UnitasProtocol launched XGLD, a yield-bearing gold asset backed by XAUt, giving users gold exposure with yield generated through Unitas strategies. Note: This post is for informational purposes only and not financial advice. DYOR.</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062429176045436945" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062429176045436945</div>
+</article><article class="card" id="post-2062424460586623161">
+  <div class="top"><div class="author">solana</div><div class="time">06:41:24 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge">medium</span></div>
+  <p class="summary">Solana 轉推 Lava Card 上線消息，該卡主打 Visa 消費最高 5% 比特幣返現，屬支付與加密消費卡場景。</p>
+  <p class="meta">研究筆記：Solana 轉推 Lava Card 上線消息，該卡主打 Visa 消費最高 5% 比特幣返現，屬支付與加密消費卡場景。</p>
+  <div class="orig">RT @lava_xyz: Lava Card is live! Earn up to 5% back in bitcoin on every purchase, anywhere Visa is accepted. No annual fee, no FX fees.…</div>
+  <a class="link" href="https://x.com/solana/status/2062424460586623161" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062424460586623161</div>
+</article><article class="card" id="post-2062401518863835433">
+  <div class="top"><div class="author">avax</div><div class="time">05:10:14 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge">medium</span></div>
+  <p class="summary">Avalanche 轉推 HODLBonds 對持有與主動交易取捨的敘事，可能與風險管理或 DeFi 收益產品定位相關。</p>
+  <p class="meta">研究筆記：Avalanche 轉推 HODLBonds 對持有與主動交易取捨的敘事，可能與風險管理或 DeFi 收益產品定位相關。</p>
+  <div class="orig">RT @HODLBonds: Most crypto investors face the same choice: Hold and miss market moves. OR Actively trade and risk getting wrecked by pr…</div>
+  <a class="link" href="https://x.com/avax/status/2062401518863835433" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062401518863835433</div>
+</article><article class="card" id="post-2062382972012261509">
+  <div class="top"><div class="author">KaiaChain</div><div class="time">03:56:32 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge">medium</span></div>
+  <p class="summary">KaiaChain 評論穩定幣抵押品設計，指出擴張限制在於抵押品選擇而非去中心化本身，並以 Sky 的 RWA 抵押作為突破純加密抵押上限的案例。</p>
+  <p class="meta">研究筆記：KaiaChain 評論穩定幣抵押品設計，指出擴張限制在於抵押品選擇而非去中心化本身，並以 Sky 的 RWA 抵押作為突破純加密抵押上限的案例。</p>
+  <div class="orig">The scaling constraint sits with the collateral choice, not decentralization itself. ETH-collateralized stables hit the ceiling Ignas describes. They need ETH to pump. Sky cleared that ceiling years ago by adding RWA-backed collateral. The constraint is specific to pure-crypto-collateral designs.</div>
+  <a class="link" href="https://x.com/KaiaChain/status/2062382972012261509" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062382972012261509</div>
+</article><article class="card" id="post-2062381281783206047">
+  <div class="top"><div class="author">KaiaChain</div><div class="time">03:49:49 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge">medium</span></div>
+  <p class="summary">KaiaChain 討論品牌穩定幣碎片化，認為若各金融科技公司都發行穩定幣，發行將商品化，跨品牌穩定幣交換層仍有競爭空間。</p>
+  <p class="meta">研究筆記：KaiaChain 討論品牌穩定幣碎片化，認為若各金融科技公司都發行穩定幣，發行將商品化，跨品牌穩定幣交換層仍有競爭空間。</p>
+  <div class="orig">Yes, and the implication is that issuance becomes the commodity layer. If every fintech launches one, none of them gets to be &quot;the&quot; onchain dollar. The category fragments along distribution lines. M0 wins issuance, and the interchange layer between branded stables is still open.</div>
+  <a class="link" href="https://x.com/KaiaChain/status/2062381281783206047" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062381281783206047</div>
+</article><article class="card" id="post-2062278925787578836">
+  <div class="top"><div class="author">arbitrum</div><div class="time">21:03:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">Arbitrum 指向 Mastercard 採用 Arbitrum 支援可程式化支付與鏈上結算的文章，屬支付與機構採用高訊號。</p>
+  <p class="meta">研究筆記：Arbitrum 指向 Mastercard 採用 Arbitrum 支援可程式化支付與鏈上結算的文章，屬支付與機構採用高訊號。</p>
+  <div class="orig">Read why Mastercard is leveraging Arbitrum to help power the future of programmable payments and onchain settlement. https://blog.arbitrum.io/mastercard-stablecoin-settlement/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062278925787578836" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062278925787578836</div>
+</article><article class="card" id="post-2062278922939633692">
+  <div class="top"><div class="author">arbitrum</div><div class="time">21:03:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">Arbitrum 再次強調 Mastercard 選用 Arbitrum 做全球穩定幣結算，凸顯全天候支付與可程式化經濟敘事。</p>
+  <p class="meta">研究筆記：Arbitrum 再次強調 Mastercard 選用 Arbitrum 做全球穩定幣結算，凸顯全天候支付與可程式化經濟敘事。</p>
+  <div class="orig">ICYMI: @Mastercard taps Arbitrum for global stablecoin settlement. Always-on payments, built for the programmable economy.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062278922939633692" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062278922939633692</div>
+</article><article class="card" id="post-2062274135862939815">
+  <div class="top"><div class="author">trondao</div><div class="time">20:44:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge">medium</span></div>
+  <p class="summary">TRON 引用 Uquid Card 世界盃門票與旅遊支付場景，強調透過 TRON 將大型體育活動消費帶上鏈。</p>
+  <p class="meta">研究筆記：TRON 引用 Uquid Card 世界盃門票與旅遊支付場景，強調透過 TRON 將大型體育活動消費帶上鏈。</p>
+  <div class="orig">The World Cup brings the world together. TRON helps connect it onchain. Through #TRON and @uquidcard, fans from around the world can purchase tickets, travel to host nations, and experience the world’s biggest sporting event firsthand.</div>
+  <a class="link" href="https://x.com/trondao/status/2062274135862939815" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062274135862939815</div>
 </article><article class="card" id="post-2062260005290528944">
   <div class="top"><div class="author">solana</div><div class="time">19:47:54 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -1502,27 +2338,33 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @zodial_xyz: Today, we are launching the first portfolio-margin lending protocol in DeFi. With Zodial, you can take on new positions, su…</div>
   <a class="link" href="https://x.com/solana/status/2062260005290528944" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062260005290528944</div>
-</article><article class="card" id="post-2062245949276405874">
-  <div class="top"><div class="author">SuiNetwork</div><div class="time">18:52:03 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
-  <p class="summary">Sui 以試算表比喻說明物件中心架構，強調可平行更新、消除瓶頸並支援即時全球擴展。</p>
-  <p class="meta">研究筆記：Sui 以試算表比喻說明物件中心架構，強調可平行更新、消除瓶頸並支援即時全球擴展。</p>
-  <div class="orig">Legacy chains: a single spreadsheet cell updated one at a time; everyone has to wait. Sui: an entire spreadsheet updating independently, simultaneously, and in parallel. Object-centric architecture means zero bottlenecks and instant global scale.</div>
-  <a class="link" href="https://x.com/SuiNetwork/status/2062245949276405874" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2062245949276405874</div>
-</article><article class="card" id="post-2062240408030310525">
-  <div class="top"><div class="author">0xPolygon</div><div class="time">18:30:02 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
-  <p class="summary">Polygon 宣布主網區塊時間由 1.75 秒降至 1.5 秒，強調更快確認與約 16% 支付吞吐提升。</p>
-  <p class="meta">研究筆記：Polygon 宣布主網區塊時間由 1.75 秒降至 1.5 秒，強調更快確認與約 16% 支付吞吐提升。</p>
-  <div class="orig">We said accelerate. We meant it. Polygon mainnet block time: 1.75s → 1.5s. The second cut since genesis. Faster blocks, quicker confirmations, ~16% more payments per second.</div>
-  <a class="link" href="https://x.com/0xPolygon/status/2062240408030310525" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2062240408030310525</div>
 </article></div>
 </section>
 <section class="section" id="chains">
-  <div class="section-head"><h2>公鏈</h2><span class="count">725 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064618621863931989">
+  <div class="section-head"><h2>公鏈</h2><span class="count">727 posts</span></div>
+  <div class="grid"><article class="card" id="post-2064692644945788968">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 12:54:21 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 發布穩定幣結算指南，主張可用四層模型把即時終局性、週末支付與低成本結算接入既有支付堆疊。</p>
+  <p class="meta">研究筆記：支付基礎設施與穩定幣結算是高訊號主題，可追蹤 Polygon 如何服務企業支付與 OMS 場景。</p>
+  <div class="orig">Most payment stacks weren&#x27;t built for real-time finality, weekend payouts, or sub-cent settlement. But the fix isn&#x27;t a rebuild.
+
+We put together a guide on the four-layer model for adding stablecoin settlement to the stack you already run.
+
+Download it: https://info.polygon.technology/oms-stablecoins-guide?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=OMS_Stablecoin_Guide_Q2_2026&amp;utm_content=report</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064692644945788968" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064692644945788968</div>
+</article><article class="card" id="post-2064663881457553870">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 11:00:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@solana 宣布 WalletConnect Pay 已在 Solana 上線，展示秒級鏈上日常支付場景。</p>
+  <p class="meta">研究筆記：鏈上支付與錢包支付體驗是 Solana 面向消費級採用的重要訊號，可追蹤後續商戶與交易量。</p>
+  <div class="orig">.@WalletConnect Pay is now live on Solana.
+
+A coffee, paid onchain in seconds.</div>
+  <a class="link" href="https://x.com/solana/status/2064663881457553870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064663881457553870</div>
+</article><article class="card" id="post-2064618621863931989">
   <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-10 08:00:12 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">reply</span><span class="badge">normal</span></div>
   <p class="summary">@arbitrum 補充 L1 與 L2 架構選擇文章連結，延伸企業鏈部署與市場進入討論。</p>
@@ -7351,8 +8193,38 @@ Literally nothing</div>
 </article></div>
 </section>
 <section class="section" id="projects">
-  <div class="section-head"><h2>項目</h2><span class="count">217 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064630303881343225">
+  <div class="section-head"><h2>項目</h2><span class="count">220 posts</span></div>
+  <div class="grid"><article class="card" id="post-2064685832259150214">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 12:27:17 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">privacy</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@MidnightNtwrk 補充完整對談影片連結，延伸其 AI、開發者與隱私基礎設施討論。</p>
+  <p class="meta">研究筆記：影片連結可作為背景材料；單則回覆資訊密度較低，保留於全部列表。</p>
+  <div class="orig">Catch the full conversation: https://www.youtube.com/watch?v=wQ3Om3N3h0E</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064685832259150214" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064685832259150214</div>
+</article><article class="card" id="post-2064685645755203960">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 12:26:32 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">privacy</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 強調 AI 正降低開發門檻，未來應用競爭將取決於底層基礎設施能力與內建隱私。</p>
+  <p class="meta">研究筆記：AI 開發者工具與隱私基礎設施交集值得追蹤，可作為 Midnight 技術敘事與生態定位線索。</p>
+  <div class="orig">@Utkush23 said it best:
+
+We’re entering a world where AI is collapsing the barrier to building, making it possible for anyone to ship faster than ever before.
+
+What will matter is the infrastructure developers build on and the capabilities they unlock from day one.
+
+And building with privacy at the core? That&#x27;s how you future-proof the next generation of applications.</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064685645755203960" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064685645755203960</div>
+</article><article class="card" id="post-2064656403998863665">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 10:30:20 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">developer</span><span class="badge">quote</span><span class="badge">low</span></div>
+  <p class="summary">@MidnightNtwrk 引用宣傳本週開發者 fireside 活動，偏社群與開發者互動。</p>
+  <p class="meta">研究筆記：活動預告可保留作社群節奏線索，但缺少具體產品或數據資訊。</p>
+  <div class="orig">You don’t want to miss this week’s fireside dev hang</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064656403998863665" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064656403998863665</div>
+</article><article class="card" id="post-2064630303881343225">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-10 08:46:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
   <p class="summary">@BNBCHAIN 轉推 Venus Protocol 固定期限金庫已在 BNB Chain 上線，第一期開放供應資產參與。</p>
@@ -9096,8 +9968,60 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 <section class="section" id="all">
-  <div class="section-head"><h2>全部</h2><span class="count">944 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064630303881343225">
+  <div class="section-head"><h2>全部</h2><span class="count">949 posts</span></div>
+  <div class="grid"><article class="card" id="post-2064692644945788968">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 12:54:21 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@0xPolygon 發布穩定幣結算指南，主張可用四層模型把即時終局性、週末支付與低成本結算接入既有支付堆疊。</p>
+  <p class="meta">研究筆記：支付基礎設施與穩定幣結算是高訊號主題，可追蹤 Polygon 如何服務企業支付與 OMS 場景。</p>
+  <div class="orig">Most payment stacks weren&#x27;t built for real-time finality, weekend payouts, or sub-cent settlement. But the fix isn&#x27;t a rebuild.
+
+We put together a guide on the four-layer model for adding stablecoin settlement to the stack you already run.
+
+Download it: https://info.polygon.technology/oms-stablecoins-guide?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=OMS_Stablecoin_Guide_Q2_2026&amp;utm_content=report</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064692644945788968" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064692644945788968</div>
+</article><article class="card" id="post-2064685832259150214">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 12:27:17 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">privacy</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@MidnightNtwrk 補充完整對談影片連結，延伸其 AI、開發者與隱私基礎設施討論。</p>
+  <p class="meta">研究筆記：影片連結可作為背景材料；單則回覆資訊密度較低，保留於全部列表。</p>
+  <div class="orig">Catch the full conversation: https://www.youtube.com/watch?v=wQ3Om3N3h0E</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064685832259150214" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064685832259150214</div>
+</article><article class="card" id="post-2064685645755203960">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 12:26:32 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">privacy</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 強調 AI 正降低開發門檻，未來應用競爭將取決於底層基礎設施能力與內建隱私。</p>
+  <p class="meta">研究筆記：AI 開發者工具與隱私基礎設施交集值得追蹤，可作為 Midnight 技術敘事與生態定位線索。</p>
+  <div class="orig">@Utkush23 said it best:
+
+We’re entering a world where AI is collapsing the barrier to building, making it possible for anyone to ship faster than ever before.
+
+What will matter is the infrastructure developers build on and the capabilities they unlock from day one.
+
+And building with privacy at the core? That&#x27;s how you future-proof the next generation of applications.</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064685645755203960" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064685645755203960</div>
+</article><article class="card" id="post-2064663881457553870">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 11:00:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@solana 宣布 WalletConnect Pay 已在 Solana 上線，展示秒級鏈上日常支付場景。</p>
+  <p class="meta">研究筆記：鏈上支付與錢包支付體驗是 Solana 面向消費級採用的重要訊號，可追蹤後續商戶與交易量。</p>
+  <div class="orig">.@WalletConnect Pay is now live on Solana.
+
+A coffee, paid onchain in seconds.</div>
+  <a class="link" href="https://x.com/solana/status/2064663881457553870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064663881457553870</div>
+</article><article class="card" id="post-2064656403998863665">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-10 10:30:20 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">developer</span><span class="badge">quote</span><span class="badge">low</span></div>
+  <p class="summary">@MidnightNtwrk 引用宣傳本週開發者 fireside 活動，偏社群與開發者互動。</p>
+  <p class="meta">研究筆記：活動預告可保留作社群節奏線索，但缺少具體產品或數據資訊。</p>
+  <div class="orig">You don’t want to miss this week’s fireside dev hang</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2064656403998863665" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064656403998863665</div>
+</article><article class="card" id="post-2064630303881343225">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-10 08:46:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
   <p class="summary">@BNBCHAIN 轉推 Venus Protocol 固定期限金庫已在 BNB Chain 上線，第一期開放供應資產參與。</p>
@@ -16683,6 +17607,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 </main>
-<footer>公開 Dashboard URL：https://joooe453-creator.github.io/xpost-monitor-pages/</footer>
+<footer>Generated at 2026-06-10 21:03 CST. Dashboard URL: https://joooe453-creator.github.io/xpost-monitor-pages/</footer>
 </body>
 </html>
