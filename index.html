@@ -4,19 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>X post monitor • Dashboard</title>
-  <style>:root{--bg:#F9F5F0;--card:#fffdf9;--ink:#1d1b18;--muted:#6f675f;--line:#e7ddd2;--accent:#5b6ee1;--accent2:#8b5cf6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}header{padding:34px 22px 18px;max-width:1180px;margin:auto}h1{margin:0;font-size:42px;letter-spacing:-.04em}header p{color:var(--muted);margin:8px 0 0}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:0 10px 25px rgba(70,50,20,.06)}nav{position:sticky;top:0;background:rgba(249,245,240,.92);backdrop-filter:blur(10px);border-block:1px solid var(--line);z-index:3}.tabs{max-width:1180px;margin:auto;display:flex;gap:10px;padding:10px 22px;overflow:auto}.tabs a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:650}main{max-width:1180px;margin:auto;padding:22px}.section{margin:0 0 38px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:0 0 12px}h2{font-size:26px;margin:0}.count{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 12px 35px rgba(70,50,20,.07)}.top{display:flex;justify-content:space-between;gap:10px;align-items:start}.author{font-weight:800}.time{color:var(--muted);font-size:13px;text-align:right}.badges{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:var(--muted);background:#fff}.badge.high{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.summary{font-weight:650}.meta{color:var(--muted);font-size:14px}.orig{white-space:pre-wrap;background:#fbf7f1;border:1px solid var(--line);border-radius:14px;padding:10px;margin:12px 0;font-size:14px}.link{color:var(--accent);font-weight:700;text-decoration:none}.postid{margin-top:8px;color:var(--muted);font-size:12px}.empty{color:var(--muted);padding:16px;border:1px dashed var(--line);border-radius:16px}</style>
+  <style>:root{--bg:#F9F5F0;--card:#fffdf9;--ink:#1d1b18;--muted:#6f675f;--line:#e7ddd2;--accent:#5b6ee1;--accent2:#8b5cf6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}header{padding:34px 22px 18px;max-width:1180px;margin:auto}h1{margin:0;font-size:42px;letter-spacing:-.04em}header p{color:var(--muted);margin:8px 0 0}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:0 10px 25px rgba(70,50,20,.06)}nav{position:sticky;top:0;background:rgba(249,245,240,.92);backdrop-filter:blur(10px);border-block:1px solid var(--line);z-index:3}.tabs{max-width:1180px;margin:auto;display:flex;gap:10px;padding:10px 22px;overflow:auto}.tabs a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:650}main{max-width:1180px;margin:auto;padding:22px}.section{margin:0 0 38px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:0 0 12px}h2{font-size:26px;margin:0}.count{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 12px 35px rgba(70,50,20,.07)}.top{display:flex;justify-content:space-between;gap:10px;align-items:start}.author{font-weight:800}.time{color:var(--muted);font-size:13px;text-align:right}.badges{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:var(--muted);background:#fff}.badge.high{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.summary{font-weight:650}.meta{color:var(--muted);font-size:14px}.orig{white-space:pre-wrap;background:#fbf7f1;border:1px solid var(--line);border-radius:14px;padding:10px;margin:10px 0;color:#332f2a}.link{display:inline-block;margin-top:8px;color:var(--accent);font-weight:700;text-decoration:none}.postid{font-size:12px;color:var(--muted);margin-top:8px}footer{max-width:1180px;margin:auto;padding:20px 22px 36px;color:var(--muted)}@media(max-width:640px){h1{font-size:32px}.grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <header>
   <h1>X post monitor</h1>
   <p>監測 X List 2057339251940069587 的最新推文，依研究價值整理為精選、公鏈、項目與全部分區。</p>
-  <div class="stats"><div class="stat">更新時間：2026-06-11 15:06 CST</div><div class="stat">本次新增：9</div><div class="stat">累計收錄：1026</div><div class="stat">最新 post_id：2064958327747178990</div></div>
+  <div class="stats"><div class="stat">更新時間：2026-06-11 18:05 CST</div><div class="stat">本次新增：15</div><div class="stat">累計收錄：1041</div><div class="stat">最新 post_id：2065011161930580203</div></div>
 </header>
 <nav><div class="tabs"><a href="#featured">精選</a><a href="#data-driven">Data-driven / 可 QT</a><a href="#chains">公鏈</a><a href="#projects">項目</a><a href="#all">全部</a></div></nav>
 <main>
 <section class="section" id="featured">
-  <div class="section-head"><h2>精選</h2><span class="count">730 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064958315189461124">
+  <div class="section-head"><h2>精選</h2><span class="count">786 posts</span></div>
+  <div class="grid"><article class="card" id="post-2065004593164267785">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:33:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">market</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@BNBCHAIN 轉推 CoinDesk 訪談觀點，提到 VanEck 人士認為 BNB 可能是美國投資者低估的公鏈之一。</p>
+  <p class="meta">研究筆記：涉及機構視角與市場認知，可追蹤 BNB Chain 在美國投資者中的敘事變化。</p>
+  <div class="orig">RT @CoinDesk: .@KyleDacruz of @VanEck_US says BNB may be one of the most underappreciated chains among U.S. investors.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004593164267785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004593164267785</div>
+</article><article class="card" id="post-2065004363748200666">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-11 09:33:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">developer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 轉推 Edda Labs 的 Midnight Sprint 已啟動，參與者將進行實作型學習與開發流程。</p>
+  <p class="meta">研究筆記：開發者教育與生態活動訊號，可追蹤 Midnight 生態 builder 參與度。</p>
+  <div class="orig">RT @ErickRomeroEdda: The @eddalabs_io Midnight Sprint is officially underway!
+
+ Participants will progress through a hands-on journey: l…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2065004363748200666" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004363748200666</div>
+</article><article class="card" id="post-2065000563843190899">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 09:17:54 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">@XLayerOfficial 稱 X Layer 在 agents 與 feedback 的主網成長排名前五，強調正在成為 agent economy 的鏈上執行環境。</p>
+  <p class="meta">研究筆記：包含主網成長排名與 AI agent 敘事，可後續補充成長指標與生態活躍度數據。</p>
+  <div class="orig">We&#x27;re top 5 in mainnet growth across agents and feedback.
+
+More agents, more signals, more real activity.
+
+X Layer is becoming a home for the agent economy - fast, scalable, and built for onchain execution.</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2065000563843190899" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065000563843190899</div>
+</article><article class="card" id="post-2064991260159713606">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 引導閱讀其成為 stablecoin settlement layer 的文章，延續穩定幣結算層敘事。</p>
+  <p class="meta">研究筆記：穩定幣結算層是高價值金融基礎設施主題，適合追蹤 TVL、持有人與支付使用數據。</p>
+  <div class="orig">Learn why Arbitrum is becoming the settlement layer for stablecoins:
+
+https://blog.arbitrum.io/settlement-layer-stablecoins/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991260159713606" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991260159713606</div>
+</article><article class="card" id="post-2064991247786459167">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 強調 stablecoins 正成為 programmable economy 的預設結算資產，並稱 Arbitrum 擁有 78 億美元穩定幣與 775 萬持有人。</p>
+  <p class="meta">研究筆記：包含明確穩定幣金額與持有人數，是可延伸為數據型內容的高價值訊號。</p>
+  <div class="orig">Stablecoins are becoming the default settlement asset of the programmable economy.
+
+They power trading, lending, payments and global value transfer.
+
+With $7.8B in stablecoins and 7.75M holders, Arbitrum is emerging as the settlement layer for the next generation of finance.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991247786459167" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991247786459167</div>
+</article><article class="card" id="post-2064958315189461124">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 06:30:02 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">prediction-market</span><span class="badge">original</span><span class="badge">normal</span></div>
   <p class="summary">@BNBCHAIN 以 MyriadMarkets 預測市場數據包裝 BNB World Cup 話題，提到使用者給墨西哥 70% 勝率。</p>
@@ -56,6 +108,24 @@ Stablecoin settlement on a messenger surface kills the friction, and that&#x27;s
   <div class="orig">The S will be sourced from buybacks and then distributed directly.</div>
   <a class="link" href="https://x.com/SonicLabs/status/2064938058491822360" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064938058491822360</div>
+</article><article class="card" id="post-2064935674713911316">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 05:00:04 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@BNBCHAIN 發布 BNB World Cup 墨西哥對南非賽事互動，邀請社群投票與預測比分。</p>
+  <p class="meta">研究筆記：偏品牌與社群活動，保留完整監測但不列為高研究價值。</p>
+  <div class="orig">The Intern&#x27;s Predictions for #BNBWorldCup are in: Mexico vs South Africa
+
+The intern&#x27;s calling it a tie.
+
+Agree or disagree?
+• Vote your winner in the poll below
+• Reply with your prediction scoreline (e.g. “2-1 to Mexico”)
+
+Most correct scores over the week wins some BNB swag
+
+Learn more about how Community vs The Intern works</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2064935674713911316" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064935674713911316</div>
 </article><article class="card" id="post-2064923351584239634">
   <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 04:11:06 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -340,6 +410,22 @@ All trading 24/7, settling instantly and accessible globally in the programmable
 ZK and privacy on Solana are accelerating</div>
   <a class="link" href="https://x.com/solana/status/2064769955308957983" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064769955308957983</div>
+</article><article class="card" id="post-2064769934702305627">
+  <div class="top"><div class="author">@avax</div><div class="time">2026-06-10 18:01:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">consumer</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">@avax 以簡短回覆參與 Golden Ticket 話題，訊號較低。</p>
+  <p class="meta">研究筆記：此則偏消費級應用或社群活動，可作為生態觸達與用戶場景觀察。</p>
+  <div class="orig">Call me Charlie the way I need a Golden Ticket</div>
+  <a class="link" href="https://x.com/avax/status/2064769934702305627" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064769934702305627</div>
+</article><article class="card" id="post-2064769746894024934">
+  <div class="top"><div class="author">@avax</div><div class="time">2026-06-10 18:00:43 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">consumer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@avax 轉推 YourGrails 私測上線與 Golden Ticket 相關活動，偏消費級收藏者應用。</p>
+  <p class="meta">研究筆記：此則偏消費級應用或社群活動，可作為生態觸達與用戶場景觀察。</p>
+  <div class="orig">RT @YourGrails: Did you get your Golden Ticket? The private YourGrails beta is officially live. A limited number of collectors have bee…</div>
+  <a class="link" href="https://x.com/avax/status/2064769746894024934" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064769746894024934</div>
 </article><article class="card" id="post-2064769388113166838">
   <div class="top"><div class="author">@Optimism</div><div class="time">2026-06-10 17:59:18 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">developer</span><span class="badge">quote</span><span class="badge">normal</span></div>
@@ -370,6 +456,14 @@ Giga will make them global and instant.
 200K TPS, finality in under 400ms. Built for trading.</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2064768722003501264" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064768722003501264</div>
+</article><article class="card" id="post-2064765820689842382">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 17:45:07 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">consumer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推 Phantom 的 Solana 品牌互動內容，偏社群與消費端曝光。</p>
+  <p class="meta">研究筆記：此則偏消費級應用或社群活動，可作為生態觸達與用戶場景觀察。</p>
+  <div class="orig">RT @phantom: in life you can&#x27;t choose the hand you&#x27;re dealt, but you can always choose Solana</div>
+  <a class="link" href="https://x.com/solana/status/2064765820689842382" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064765820689842382</div>
 </article><article class="card" id="post-2064765598878282181">
   <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 17:44:14 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">developer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
@@ -464,6 +558,18 @@ Very very proud to share that @solana is the presenting sponsor of the World Ser
   <div class="orig">RT @Cointelegraph: JUST IN: Mastercard launches Agent Pay for Machines, with Aave, Coinbase, OKX, Polygon, Ripple and Solana among its fi…</div>
   <a class="link" href="https://x.com/0xPolygon/status/2064730579216539782" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064730579216539782</div>
+</article><article class="card" id="post-2064729973890465925">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-10 15:22:41 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">consumer</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 引用 Solflare Packs 上線，展示錢包內鏈上收藏與實體寄送的消費級玩法。</p>
+  <p class="meta">研究筆記：保留於監測列表，作為生態動態與敘事追蹤素材。</p>
+  <div class="orig">Gacha, catch ’em all
+
+@solflare Packs are LIVE in your wallet.
+
+Rip packs, collect graded slabs onchain, sell them back within 72 hours or ship them home.</div>
+  <a class="link" href="https://x.com/solana/status/2064729973890465925" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064729973890465925</div>
 </article><article class="card" id="post-2064727109797310928">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 15:11:18 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge">normal</span></div>
@@ -513,6 +619,14 @@ join us at ETHGlobal New York for:
 Set what an agent can spend once, and it transacts inside those limits, settling in whatever format fits.</div>
   <a class="link" href="https://x.com/solana/status/2064707518530560024" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064707518530560024</div>
+</article><article class="card" id="post-2064707265136083393">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-10 13:52:27 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">@0xPolygon 引用補充完整公告連結，延伸 Mastercard Agent Pay for Machines 相關資訊。</p>
+  <p class="meta">研究筆記：保留於監測列表，作為生態動態與敘事追蹤素材。</p>
+  <div class="orig">The full announcement:</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064707265136083393" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064707265136083393</div>
 </article><article class="card" id="post-2064705883972780321">
   <div class="top"><div class="author">@Ripple</div><div class="time">2026-06-10 13:46:57 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -2016,6 +2130,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">The full picture https://44826671.fs1.hubspotusercontent-na1.net/hubfs/44826671/Optimism%20-%20Centralized%20Exchanges.pdf?utm_campaign=Brochure%20%28From%20June%208th%29&amp;utm_source=twitter&amp;utm_medium=social</div>
   <a class="link" href="https://x.com/Optimism/status/2063960707117236300" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2063960707117236300</div>
+</article><article class="card" id="post-2063960704504180953">
+  <div class="top"><div class="author">@Optimism</div><div class="time">12:25:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Optimism 回覆補充 YouTube 直播連結，指向同場 CEX 與鏈上分發主題內容。</p>
+  <p class="meta">研究筆記：直播入口本身訊號中等，需與主帖內容一起判斷其研究價值。</p>
+  <div class="orig">Streaming on youtube https://www.youtube.com/live/Um2B-gaPMUA</div>
+  <a class="link" href="https://x.com/Optimism/status/2063960704504180953" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063960704504180953</div>
+</article><article class="card" id="post-2063960702604214509">
+  <div class="top"><div class="author">@Optimism</div><div class="time">12:25:52 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">reply</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Optimism 回覆提供 X 直播連結，補充觀看其 CEX 分發相關討論的入口。</p>
+  <p class="meta">研究筆記：屬直播入口資訊，研究價值取決於主帖討論內容。</p>
+  <div class="orig">Watch it on 𝕏 https://twitter.com/i/broadcasts/1PJqrrDjLoPxb</div>
+  <a class="link" href="https://x.com/Optimism/status/2063960702604214509" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063960702604214509</div>
 </article><article class="card" id="post-2063960697973637593">
   <div class="top"><div class="author">@Optimism</div><div class="time">12:25:51 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">original</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -2040,6 +2170,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Introducing the Night Sky Accelerator Program Midnight’s NEW 10-week accelerator for early-stage teams building privacy-first solutions designed for scale. We believe privacy isn’t a feature to bolt on. It’s the foundation the next generation of category-defining companies will be built on. Night Sky is designed to find and support the teams building that future. Selected founders will receive: Technical integration Fundraising support Commercialization &amp; growth guidance Wide Midnight Ecosystem access Investor exposure through Pitch Day Capital allocation from @midnightfdn Built for ambitious teams across Web2, Web3, and adjacent ecosystems. The sky isn’t the limit. It’s the starting point. Apply Now:</div>
   <a class="link" href="https://x.com/MidnightNtwrk/status/2063942193685913914" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2063942193685913914</div>
+</article><article class="card" id="post-2063928377548173360">
+  <div class="top"><div class="author">@SuiNetwork</div><div class="time">10:17:25 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">Sui Network 轉發簡短出貨訊號，暗示相關建設或產品發布進入交付階段。</p>
+  <p class="meta">研究筆記：上下文不足，研究價值中低，後續需觀察是否對應具體產品或生態更新。</p>
+  <div class="orig">RT @EmanAbio: It&#x27;s shipping time</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2063928377548173360" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2063928377548173360</div>
 </article><article class="card" id="post-2063923158470611379">
   <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">09:56:41 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">retweet</span><span class="badge">retweet</span><span class="badge">normal</span></div>
@@ -2736,6 +2874,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @Jaileddotfun: Jailed is now live on Solana. we&#x27;re building the most unhinged prison simulator. get in now: https://www.jailed.fun/ r…</div>
   <a class="link" href="https://x.com/solana/status/2062970270743494990" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062970270743494990</div>
+</article><article class="card" id="post-2062966194357858496">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">18:34:03 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Polygon 發布僅含表情符號的回覆，屬低訊號社群互動內容。</p>
+  <p class="meta">研究筆記：Polygon 發布僅含表情符號的回覆，屬低訊號社群互動內容。</p>
+  <div class="orig">[原文僅包含已移除的表情符號或無可展示文字]</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062966194357858496" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062966194357858496</div>
 </article><article class="card" id="post-2062955987561222208">
   <div class="top"><div class="author">@SeiNetwork</div><div class="time">17:53:29 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -2752,6 +2898,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @YOM_Official: A note on what today actually is. Today isn&#x27;t YOM&#x27;s beginning. It&#x27;s YOM&#x27;s coming-out moment. We&#x27;ve spent the last 3+ ye…</div>
   <a class="link" href="https://x.com/avax/status/2062955101304877103" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062955101304877103</div>
+</article><article class="card" id="post-2062954498104942803">
+  <div class="top"><div class="author">@solana</div><div class="time">17:47:34 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 轉推 Solana Mobile 相關社群回應，主要屬 Seeker 應用生態的社群互動。</p>
+  <p class="meta">研究筆記：Solana 轉推 Solana Mobile 相關社群回應，主要屬 Seeker 應用生態的社群互動。</p>
+  <div class="orig">RT @solana_sailor: @solana @solanamobile Damn, I have to update this</div>
+  <a class="link" href="https://x.com/solana/status/2062954498104942803" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062954498104942803</div>
+</article><article class="card" id="post-2062954021007069454">
+  <div class="top"><div class="author">@solana</div><div class="time">17:45:41 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 發布僅含表情符號的回覆，屬低訊號社群互動內容。</p>
+  <p class="meta">研究筆記：Solana 發布僅含表情符號的回覆，屬低訊號社群互動內容。</p>
+  <div class="orig">[原文僅包含已移除的表情符號或無可展示文字]</div>
+  <a class="link" href="https://x.com/solana/status/2062954021007069454" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062954021007069454</div>
 </article><article class="card" id="post-2062953776445522240">
   <div class="top"><div class="author">@solana</div><div class="time">17:44:42 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -2792,6 +2954,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Storage. Liquidity. Real products. @WalrusProtocol and @DeepBookonSui are two of the core building blocks available to Sui Overflow teams. $140K combined prize pool for builders ready to put them to work.</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2062947166667076093" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062947166667076093</div>
+</article><article class="card" id="post-2062945409719304302">
+  <div class="top"><div class="author">@trondao</div><div class="time">17:11:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">TRON 發布放鬆語氣的社群貼文，主要是品牌互動與市場情緒緩和訊號。</p>
+  <p class="meta">研究筆記：TRON 發布放鬆語氣的社群貼文，主要是品牌互動與市場情緒緩和訊號。</p>
+  <div class="orig">Let&#x27;s all take a deep breath. Zoom out. Touch grass.</div>
+  <a class="link" href="https://x.com/trondao/status/2062945409719304302" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062945409719304302</div>
 </article><article class="card" id="post-2062941417547186195">
   <div class="top"><div class="author">@trondao</div><div class="time">16:55:36 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">research</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -2800,6 +2970,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @MessariCrypto: Q1 2026 State of Blockchains is live. 21 networks, five core metrics, one clear theme: even in a down quarter, a few n…</div>
   <a class="link" href="https://x.com/trondao/status/2062941417547186195" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062941417547186195</div>
+</article><article class="card" id="post-2062940059071131659">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">16:50:12 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Polygon 以簡短回覆強調正在解決真實世界問題，屬品牌定位與社群互動內容。</p>
+  <p class="meta">研究筆記：Polygon 以簡短回覆強調正在解決真實世界問題，屬品牌定位與社群互動內容。</p>
+  <div class="orig">busy solving real world problems</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062940059071131659" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062940059071131659</div>
+</article><article class="card" id="post-2062937470014984278">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">16:39:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNBCHAIN 發布簡短回覆，屬低訊號社群互動內容。</p>
+  <p class="meta">研究筆記：BNBCHAIN 發布簡短回覆，屬低訊號社群互動內容。</p>
+  <div class="orig">I need one</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062937470014984278" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062937470014984278</div>
 </article><article class="card" id="post-2062936487512179022">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">16:36:00 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">finance</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -2816,6 +3002,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @TheMarketRunup: NEW Episode of The Market Runup is live President of @MidnightNtwrk Fahmi Syed on Onchain Privacy and what needs to…</div>
   <a class="link" href="https://x.com/MidnightNtwrk/status/2062933263228764510" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062933263228764510</div>
+</article><article class="card" id="post-2062933072396660930">
+  <div class="top"><div class="author">@avax</div><div class="time">16:22:26 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Avalanche 發布簡短稱讚回覆，屬社群互動訊號。</p>
+  <p class="meta">研究筆記：Avalanche 發布簡短稱讚回覆，屬社群互動訊號。</p>
+  <div class="orig">incredible photos!</div>
+  <a class="link" href="https://x.com/avax/status/2062933072396660930" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062933072396660930</div>
 </article><article class="card" id="post-2062932809732194808">
   <div class="top"><div class="author">@solana</div><div class="time">16:21:23 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">consumer</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -2880,6 +3074,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @AvaxTeam1: Avalanche May 2026 Recap Team1 opens applications, CME futures go live, PAYCO hits 2-second settlements, RWAs reach $1.34…</div>
   <a class="link" href="https://x.com/avax/status/2062905820778778681" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062905820778778681</div>
+</article><article class="card" id="post-2062895532918399360">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">13:53:16 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">finance</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">Arbitrum 以週五短文重申可程式化經濟正在承載下一代金融產品，屬其 programmable economy 品牌敘事。</p>
+  <p class="meta">研究筆記：Arbitrum 以週五短文重申可程式化經濟正在承載下一代金融產品，屬其 programmable economy 品牌敘事。</p>
+  <div class="orig">Every Friday is another reminder: The next generation of financial products is being built in the programmable economy. And it&#x27;s happening 24/7.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062895532918399360" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062895532918399360</div>
 </article><article class="card" id="post-2062894039418937392">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">13:47:20 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -2896,6 +3098,70 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @EtherealnewsHQ: Ethereal news weekly #26 @drakefjustin qday odds: 10% by 2030 &amp; 50% by 2032 @aave rsETH post mortem @ethPandaOps…</div>
   <a class="link" href="https://x.com/ethereum/status/2062893752344043908" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062893752344043908</div>
+</article><article class="card" id="post-2062890464513294475">
+  <div class="top"><div class="author">@avax</div><div class="time">13:33:08 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Avalanche 以簡短回覆呼應九月活動或會議安排，屬社群與活動預熱訊號。</p>
+  <p class="meta">研究筆記：Avalanche 以簡短回覆呼應九月活動或會議安排，屬社群與活動預熱訊號。</p>
+  <div class="orig">see you in september!</div>
+  <a class="link" href="https://x.com/avax/status/2062890464513294475" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062890464513294475</div>
+</article><article class="card" id="post-2062890051478962340">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">13:31:29 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNBCHAIN 發布僅含圖片、GIF 或已移除符號的簡短互動內容，主要屬社群互動訊號。</p>
+  <p class="meta">研究筆記：BNBCHAIN 發布僅含圖片、GIF 或已移除符號的簡短互動內容，主要屬社群互動訊號。</p>
+  <div class="orig">[原文僅包含已移除的 emoji 或無可展示文字]</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062890051478962340" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062890051478962340</div>
+</article><article class="card" id="post-2062889955718738002">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">13:31:06 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 以簡短回覆延續高頻交易與社群互動語境，主要屬品牌互動訊號。</p>
+  <p class="meta">研究筆記：BNB Chain 以簡短回覆延續高頻交易與社群互動語境，主要屬品牌互動訊號。</p>
+  <div class="orig">Trenches never sleep</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062889955718738002" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062889955718738002</div>
+</article><article class="card" id="post-2062889648884482309">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">13:29:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNBCHAIN 發布僅含圖片、GIF 或已移除符號的簡短互動內容，主要屬社群互動訊號。</p>
+  <p class="meta">研究筆記：BNBCHAIN 發布僅含圖片、GIF 或已移除符號的簡短互動內容，主要屬社群互動訊號。</p>
+  <div class="orig">[原文僅包含已移除的 emoji 或無可展示文字]</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062889648884482309" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062889648884482309</div>
+</article><article class="card" id="post-2062889554286092402">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">13:29:31 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 以簡短回覆強化鏈上生態持續運轉的社群語氣，屬低訊號互動內容。</p>
+  <p class="meta">研究筆記：BNB Chain 以簡短回覆強化鏈上生態持續運轉的社群語氣，屬低訊號互動內容。</p>
+  <div class="orig">What&#x27;s sleep?</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062889554286092402" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062889554286092402</div>
+</article><article class="card" id="post-2062889290489545123">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">13:28:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNBCHAIN 發布更新，主題聚焦 general，可作為該生態敘事與社群動向參考。</p>
+  <p class="meta">研究筆記：BNBCHAIN 發布更新，主題聚焦 general，可作為該生態敘事與社群動向參考。</p>
+  <div class="orig">(No text content)</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062889290489545123" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062889290489545123</div>
+</article><article class="card" id="post-2062887110127042625">
+  <div class="top"><div class="author">@avax</div><div class="time">13:19:48 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Avalanche 回覆 Kevin 的動態，表達祝福與期待後續進展，主要是社群與人才動向互動。</p>
+  <p class="meta">研究筆記：Avalanche 回覆 Kevin 的動態，表達祝福與期待後續進展，主要是社群與人才動向互動。</p>
+  <div class="orig">thanks kevin, wishing you the best in monk mode and excited to see what comes next!</div>
+  <a class="link" href="https://x.com/avax/status/2062887110127042625" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062887110127042625</div>
+</article><article class="card" id="post-2062884630982979690">
+  <div class="top"><div class="author">@avax</div><div class="time">13:09:57 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Avalanche 發布簡短稱讚回覆，屬社群互動訊號。</p>
+  <p class="meta">研究筆記：Avalanche 發布簡短稱讚回覆，屬社群互動訊號。</p>
+  <div class="orig">looks clean</div>
+  <a class="link" href="https://x.com/avax/status/2062884630982979690" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062884630982979690</div>
 </article><article class="card" id="post-2062883580334710943">
   <div class="top"><div class="author">@LayerZero_Core</div><div class="time">13:05:46 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
@@ -2912,6 +3178,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">&quot;There is a path to tokenizing AI in the US and going to market the right way. We&#x27;ve found that path in participation with Solana.&quot; — @chris_sinkey, @nightowlai_ and @SuperteamUSA member (Video attached)</div>
   <a class="link" href="https://x.com/solana/status/2062873393595387925" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062873393595387925</div>
+</article><article class="card" id="post-2062871798346399992">
+  <div class="top"><div class="author">@solana</div><div class="time">12:19:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 對 Backpack 相關公告以簡短反應互動，主要是對生態消息的社群放大。</p>
+  <p class="meta">研究筆記：Solana 對 Backpack 相關公告以簡短反應互動，主要是對生態消息的社群放大。</p>
+  <div class="orig">[原文僅包含已移除的 emoji 或無可展示文字]</div>
+  <a class="link" href="https://x.com/solana/status/2062871798346399992" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062871798346399992</div>
 </article><article class="card" id="post-2062871652082610213">
   <div class="top"><div class="author">@solana</div><div class="time">12:18:00 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">rwa</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -2936,6 +3210,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @TryNoahAI: Cross-chain just got a lot easier. We have integrated @lifiprotocol skills into Noah for easier access without stitching inf…</div>
   <a class="link" href="https://x.com/solana/status/2062869658504663284" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062869658504663284</div>
+</article><article class="card" id="post-2062869642616688656">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">12:10:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">finance</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">Polygon 發布「future of finance」短訊，屬金融敘事與品牌定位訊號。</p>
+  <p class="meta">研究筆記：Polygon 發布「future of finance」短訊，屬金融敘事與品牌定位訊號。</p>
+  <div class="orig">&quot;future of finance&quot;</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2062869642616688656" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062869642616688656</div>
 </article><article class="card" id="post-2062867254321263082">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">12:00:00 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -2960,6 +3242,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">The biggest hidden cost of sovereign chains? Fragmented liquidity. Institutions shouldn&#x27;t have to choose between control and connection. In Part 3 of our Technical Roadmap Deep Dive, @BuildonKaia explains how @KaiaChain delivers sovereignty without isolation.</div>
   <a class="link" href="https://x.com/KaiaChain/status/2062822460735795363" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062822460735795363</div>
+</article><article class="card" id="post-2062821750912754001">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">09:00:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">finance</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">Arbitrum 發布簡短口號，重申 programmable finance 的定位，屬品牌與敘事訊號。</p>
+  <p class="meta">研究筆記：Arbitrum 發布簡短口號，重申 programmable finance 的定位，屬品牌與敘事訊號。</p>
+  <div class="orig">programmable finance or bust</div>
+  <a class="link" href="https://x.com/arbitrum/status/2062821750912754001" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062821750912754001</div>
 </article><article class="card" id="post-2062809419247681765">
   <div class="top"><div class="author">@SuiNetwork</div><div class="time">08:11:05 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -2968,6 +3258,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">SWIFT was built for another era. Sui settles in &lt;1 sec for $0. Global. 24/7. This is what money movement should feel like.</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2062809419247681765" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062809419247681765</div>
+</article><article class="card" id="post-2062808432504422578">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">08:07:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 發布簡短回覆，強調 AI agents 將在 BNB Chain 上結算，延續 AI 與鏈上支付敘事。</p>
+  <p class="meta">研究筆記：BNB Chain 發布簡短回覆，強調 AI agents 將在 BNB Chain 上結算，延續 AI 與鏈上支付敘事。</p>
+  <div class="orig">Agents will settle on BNB Chain</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062808432504422578" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062808432504422578</div>
 </article><article class="card" id="post-2062799022553997630">
   <div class="top"><div class="author">@XLayerOfficial</div><div class="time">07:29:46 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -2992,6 +3290,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Another private payment option is now available for users on BNB Chain. @AnomaPay V1 lets users hold, transfer, and pay with crypto without exposing their balance or transaction history publicly. Note: This post is for informational purposes only and not financial advice. DYOR.</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062791534156853487" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062791534156853487</div>
+</article><article class="card" id="post-2062787507520229776">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">06:44:01 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">XLayerOfficial 發布簡短互動回覆，內容為「Let&#x27;s go!!!」，需結合對話上下文判斷實際重要性。</p>
+  <p class="meta">研究筆記：XLayerOfficial 發布簡短互動回覆，內容為「Let&#x27;s go!!!」，需結合對話上下文判斷實際重要性。</p>
+  <div class="orig">Let&#x27;s go!!!</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2062787507520229776" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062787507520229776</div>
+</article><article class="card" id="post-2062767854857212224">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">05:25:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 發布簡短互動回覆，稱讚對方 hoodie，主要屬社群互動訊號。</p>
+  <p class="meta">研究筆記：BNB Chain 發布簡短互動回覆，稱讚對方 hoodie，主要屬社群互動訊號。</p>
+  <div class="orig">I like your hoodie</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2062767854857212224" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062767854857212224</div>
 </article><article class="card" id="post-2062764035045736612">
   <div class="top"><div class="author">@solana</div><div class="time">05:10:44 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">quote</span><span class="badge">normal</span></div>
@@ -3024,6 +3338,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @YeiFinance: Clovis is Giga-ready. We built for this exact moment: cross-chain liquidity, yield that stacks, designed for the fastest t…</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062721249802064027" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062721249802064027</div>
+</article><article class="card" id="post-2062720799375761814">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">02:18:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SeiNetwork 發布簡短互動回覆，內容為「giga ready」，需結合對話上下文判斷重要性。</p>
+  <p class="meta">研究筆記：SeiNetwork 發布簡短互動回覆，內容為「giga ready」，需結合對話上下文判斷重要性。</p>
+  <div class="orig">giga ready</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2062720799375761814" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062720799375761814</div>
+</article><article class="card" id="post-2062716054581960984">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">02:00:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SeiNetwork 發布簡短回覆，提到兩個團隊都擅長解決困難問題，主要屬互動訊號。</p>
+  <p class="meta">研究筆記：SeiNetwork 發布簡短回覆，提到兩個團隊都擅長解決困難問題，主要屬互動訊號。</p>
+  <div class="orig">Two teams built for solving hard problems</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2062716054581960984" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062716054581960984</div>
 </article><article class="card" id="post-2062712551822295277">
   <div class="top"><div class="author">@avax</div><div class="time">01:46:10 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">event</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -3040,6 +3370,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @BNBChainDevs: if (builder.canShip()) { build(&quot;AI trading agent&quot;); compete(&quot;$36,000&quot;); deploy(&quot;BNB Chain&quot;); }</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062702655231623309" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062702655231623309</div>
+</article><article class="card" id="post-2062686632872931685">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">00:03:10 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <p class="meta">研究筆記：SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <div class="orig">spin it up!</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2062686632872931685" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062686632872931685</div>
 </article><article class="card" id="post-2062685846797750708">
   <div class="top"><div class="author">@KaiaChain</div><div class="time">00:00:03 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -3056,6 +3394,38 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @MonacoTrading: We&#x27;re excited to announce a new research collaboration with Fhenix (@fhenix) focused on confidential onchain trading inf…</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062684298830917800" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062684298830917800</div>
+</article><article class="card" id="post-2062684196896657436">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">23:53:30 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <p class="meta">研究筆記：SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <div class="orig">nice</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2062684196896657436" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062684196896657436</div>
+</article><article class="card" id="post-2062684054508523546">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">23:52:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <p class="meta">研究筆記：SeiNetwork 發布簡短回覆，主要屬互動訊號，需結合上下文判斷重要性。</p>
+  <div class="orig">Sei mentioned!</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2062684054508523546" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062684054508523546</div>
+</article><article class="card" id="post-2062672411296690310">
+  <div class="top"><div class="author">@solana</div><div class="time">23:06:40 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 發布僅含表情符號的回覆，已依展示規則在 HTML 移除原文表情。</p>
+  <p class="meta">研究筆記：Solana 發布僅含表情符號的回覆，已依展示規則在 HTML 移除原文表情。</p>
+  <div class="orig">[原文僅包含已移除的 emoji 或無可展示文字]</div>
+  <a class="link" href="https://x.com/solana/status/2062672411296690310" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062672411296690310</div>
+</article><article class="card" id="post-2062668134507561335">
+  <div class="top"><div class="author">@trondao</div><div class="time">22:49:40 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">TRON 補充紐約活動報名資訊，提供 Luma 註冊連結。</p>
+  <p class="meta">研究筆記：TRON 補充紐約活動報名資訊，提供 Luma 註冊連結。</p>
+  <div class="orig">See you in NYC. Register below. https://luma.com/yghkudgt</div>
+  <a class="link" href="https://x.com/trondao/status/2062668134507561335" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062668134507561335</div>
 </article><article class="card" id="post-2062668132842357247">
   <div class="top"><div class="author">@trondao</div><div class="time">22:49:40 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ecosystem</span><span class="badge">reply</span><span class="badge high">high</span></div>
@@ -3080,6 +3450,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">TRON is headed to NYC next week. Join #TRON Academy as we kick off @ETHGlobal New York with a Happy Hour featuring pool, darts, drinks, and conversations with the next generation of builders.</div>
   <a class="link" href="https://x.com/trondao/status/2062668127331024900" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062668127331024900</div>
+</article><article class="card" id="post-2062667748539543645">
+  <div class="top"><div class="author">@SonicLabs</div><div class="time">22:48:08 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">SonicLabs 發布偏社群互動型提醒，資訊量較低。</p>
+  <p class="meta">研究筆記：SonicLabs 發布偏社群互動型提醒，資訊量較低。</p>
+  <div class="orig">This a reminder to check up on all your crypto homies</div>
+  <a class="link" href="https://x.com/SonicLabs/status/2062667748539543645" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062667748539543645</div>
 </article><article class="card" id="post-2062665826616922321">
   <div class="top"><div class="author">@solana</div><div class="time">22:40:30 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">partnership</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -3096,6 +3474,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Another private payment option is now available for users on BNB Chain. @AnomaPay V1 lets users hold, transfer, and pay with crypto without exposing their balance or transaction history publicly. Note: This post is for informational purposes only and not financial advice. DYOR.</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062655678745817129" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062655678745817129</div>
+</article><article class="card" id="post-2062654846646284752">
+  <div class="top"><div class="author">@trondao</div><div class="time">21:56:52 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">general</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">trondao 轉推一般更新，需結合後續脈絡判斷重要性。</p>
+  <p class="meta">研究筆記：trondao 轉推一般更新，需結合後續脈絡判斷重要性。</p>
+  <div class="orig">RT @T3_FCU: T3 FCU now operates in coordination with regulatory agencies and government partners across 23 jurisdictions spanning five cont…</div>
+  <a class="link" href="https://x.com/trondao/status/2062654846646284752" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062654846646284752</div>
 </article><article class="card" id="post-2062652368454316220">
   <div class="top"><div class="author">@Optimism</div><div class="time">21:47:01 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -3136,6 +3522,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">The results are in. Over the past few weeks, hundreds of builders competed across two hackathons, shipping everything from v4 Hook protocols and prediction markets to AI agents and SocialFi experiences. Meet the winners</div>
   <a class="link" href="https://x.com/XLayerOfficial/status/2062647598792802793" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062647598792802793</div>
+</article><article class="card" id="post-2062643126859145687">
+  <div class="top"><div class="author">@solana</div><div class="time">21:10:18 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">general</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">solana 轉推一般更新，需結合後續脈絡判斷重要性。</p>
+  <p class="meta">研究筆記：solana 轉推一般更新，需結合後續脈絡判斷重要性。</p>
+  <div class="orig">RT @predikt_gg: https://x.com/i/article/2062554967823503360</div>
+  <a class="link" href="https://x.com/solana/status/2062643126859145687" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062643126859145687</div>
 </article><article class="card" id="post-2062642524687106243">
   <div class="top"><div class="author">@solana</div><div class="time">21:07:54 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -3160,6 +3554,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @VanHoVibes: I just got my ticket. This is my birthday week Excited to celebrate with my favorite chain</div>
   <a class="link" href="https://x.com/avax/status/2062642153726341348" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062642153726341348</div>
+</article><article class="card" id="post-2062641451993813279">
+  <div class="top"><div class="author">@trondao</div><div class="time">21:03:38 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">trondao 發布一般更新，需結合後續脈絡判斷重要性。</p>
+  <p class="meta">研究筆記：trondao 發布一般更新，需結合後續脈絡判斷重要性。</p>
+  <div class="orig">As a taxi driver in Buenos Aires, Jose met people from all over the world. Different countries. Different backgrounds. One shared network. For many global users, TRON has become a simple way to connect and move value across borders.</div>
+  <a class="link" href="https://x.com/trondao/status/2062641451993813279" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062641451993813279</div>
 </article><article class="card" id="post-2062641424974131303">
   <div class="top"><div class="author">@solana</div><div class="time">21:03:32 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">ecosystem</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -3168,6 +3570,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @mrinko: &gt; 2,857 frontier submissions &gt; largest startup competition in human history &gt; jtx launching &gt; alpenglow cooking &gt; simds to fix…</div>
   <a class="link" href="https://x.com/solana/status/2062641424974131303" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062641424974131303</div>
+</article><article class="card" id="post-2062640887763492935">
+  <div class="top"><div class="author">@solana</div><div class="time">21:01:24 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">solana 發布簡短社群互動內容，資訊量有限。</p>
+  <p class="meta">研究筆記：solana 發布簡短社群互動內容，資訊量有限。</p>
+  <div class="orig">[原文僅含表情符號，已依規則移除]</div>
+  <a class="link" href="https://x.com/solana/status/2062640887763492935" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062640887763492935</div>
 </article><article class="card" id="post-2062638927937257534">
   <div class="top"><div class="author">@ethereum</div><div class="time">20:53:37 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">payments</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -3200,6 +3610,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @SeiNetwork: Over 50% of U.S. equity volume now trades in dark pools or off-exchange. In TradFi, private execution is critical market s…</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062635748004966587" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062635748004966587</div>
+</article><article class="card" id="post-2062631137168495004">
+  <div class="top"><div class="author">@solana</div><div class="time">20:22:39 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">general</span><span class="badge">quote</span><span class="badge">normal</span></div>
+  <p class="summary">solana 發布一般更新，需結合後續脈絡判斷重要性。</p>
+  <p class="meta">研究筆記：solana 發布一般更新，需結合後續脈絡判斷重要性。</p>
+  <div class="orig">Source: @Blockworks Read an excerpt of the larger Lightspeed report here:</div>
+  <a class="link" href="https://x.com/solana/status/2062631137168495004" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062631137168495004</div>
 </article><article class="card" id="post-2062627375548883299">
   <div class="top"><div class="author">@solana</div><div class="time">20:07:42 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">ecosystem</span><span class="badge">native_retweet</span><span class="badge high">high</span></div>
@@ -5888,6 +6306,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Midnight City just got a serious upgrade. V2 of @MidnightCitySim is now live, with agent spawning coming soon. Check it out https://midnight.city/</div>
   <a class="link" href="https://x.com/MidnightNtwrk/status/2057520351295230104" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2057520351295230104</div>
+</article><article class="card" id="post-2057363429049180381">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-05-21 07:30 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">low_value</span><span class="badge">low_value</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 發佈簡短 meme 文案「internet capital memes」，偏社群互動，研究價值較低。</p>
+  <p class="meta">研究筆記：Solana 發佈簡短 meme 文案「internet capital memes」，偏社群互動，研究價值較低。</p>
+  <div class="orig">internet capital memes</div>
+  <a class="link" href="https://x.com/solana/status/2057363429049180381" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057363429049180381</div>
 </article><article class="card" id="post-2057355953406873783">
   <div class="top"><div class="author">@solana</div><div class="time">2026-05-21 07:01 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">depin / energy</span><span class="badge">depin / energy</span><span class="badge">normal</span></div>
@@ -5896,6 +6322,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @Evoracharge: Delivered 300K km of energy through mobile charging and battery swaps on @solana, now turning the physical infrastructure into onchain energy markets.</div>
   <a class="link" href="https://x.com/solana/status/2057355953406873783" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2057355953406873783</div>
+</article><article class="card" id="post-2057355855016886411">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-05-21 07:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">low_value</span><span class="badge">low_value</span><span class="badge">normal</span></div>
+  <p class="summary">Solana 發佈簡短問候「gm」，屬低資訊量社群互動。</p>
+  <p class="meta">研究筆記：Solana 發佈簡短問候「gm」，屬低資訊量社群互動。</p>
+  <div class="orig">gm</div>
+  <a class="link" href="https://x.com/solana/status/2057355855016886411" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057355855016886411</div>
 </article><article class="card" id="post-2057352618046070869">
   <div class="top"><div class="author">@SuiNetwork</div><div class="time">2026-05-21 06:48 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">technical / stablecoin</span><span class="badge">technical / stablecoin</span><span class="badge">normal</span></div>
@@ -5944,6 +6378,30 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Korea&#x27;s leading retail payment app #PAYCO is now running full stablecoin payment cycles on @avax — from QR scan to $KRWPS.</div>
   <a class="link" href="https://x.com/avax/status/2057330655386857936" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2057330655386857936</div>
+</article><article class="card" id="post-2057316560574799992">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-05-21 04:24 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">community / ambassador</span><span class="badge">community / ambassador</span><span class="badge">normal</span></div>
+  <p class="summary">Midnight Network 宣布 Nightforce Ambassador Program 第 4 期開放申請，偏社群招募。</p>
+  <p class="meta">研究筆記：Midnight Network 宣布 Nightforce Ambassador Program 第 4 期開放申請，偏社群招募。</p>
+  <div class="orig">Cohort 4 of the Nightforce Ambassador Program is now taking applications. If you believe in the mission of Midnight…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2057316560574799992" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057316560574799992</div>
+</article><article class="card" id="post-2057311729630208204">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-05-21 04:05 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">event</span><span class="badge">event</span><span class="badge">normal</span></div>
+  <p class="summary">Solana Ecosystem Call #3 將於下週四直播。</p>
+  <p class="meta">研究筆記：Solana Ecosystem Call #3 將於下週四直播。</p>
+  <div class="orig">New month, same day. Solana Ecosystem Call #3 premieres live next Thursday.</div>
+  <a class="link" href="https://x.com/solana/status/2057311729630208204" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057311729630208204</div>
+</article><article class="card" id="post-2057310061127684448">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-05-21 03:58 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">low_value</span><span class="badge">low_value</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 多則簡短回覆／反應（如 、Live with BNB Chain、），低資訊量。</p>
+  <p class="meta">研究筆記：BNB Chain 多則簡短回覆／反應（如 、Live with BNB Chain、），低資訊量。</p>
+  <div class="orig">Short replies/reactions (&quot;&quot;, &quot;Live with BNB Chain &quot;, &quot;&quot;) to earlier conversations.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2057310061127684448" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057310061127684448</div>
 </article><article class="card" id="post-2057289880146006290">
   <div class="top"><div class="author">@KaiaChain</div><div class="time">2026-05-21 02:38 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin / metrics</span><span class="badge">stablecoin / metrics</span><span class="badge">normal</span></div>
@@ -5960,6 +6418,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Thanking coverage about KRW and JPY stablecoins on the same L1, highlighting Korea-Japan trade settlement potential and iM Bank joining the KRW pilot.</div>
   <a class="link" href="https://x.com/KaiaChain/status/2057283969214030238" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2057283969214030238</div>
+</article><article class="card" id="post-2057280258383008238">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-05-21 02:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">low_value</span><span class="badge">low_value</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 發 meme：「我們唯一支持的通脹」。</p>
+  <p class="meta">研究筆記：BNB Chain 發 meme：「我們唯一支持的通脹」。</p>
+  <div class="orig">The only inflation we support</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2057280258383008238" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057280258383008238</div>
+</article><article class="card" id="post-2057276571237728664">
+  <div class="top"><div class="author">@KaiaChain</div><div class="time">2026-05-21 01:45 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">commentary / stablecoin</span><span class="badge">commentary / stablecoin</span><span class="badge">normal</span></div>
+  <p class="summary">Kaia 評論一篇文章，表示第 3 與第 8 點對長期影響特別有力；資訊較依賴原文脈絡。</p>
+  <p class="meta">研究筆記：Kaia 評論一篇文章，表示第 3 與第 8 點對長期影響特別有力；資訊較依賴原文脈絡。</p>
+  <div class="orig">Commenting on an article, highlighting points #3 and #8 as particularly strong for long-term impact.</div>
+  <a class="link" href="https://x.com/KaiaChain/status/2057276571237728664" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2057276571237728664</div>
 </article><article class="card" id="post-2057221836035826100">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-05-20</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">integration</span><span class="badge">integration</span><span class="badge">normal</span></div>
@@ -6003,8 +6477,50 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 <section class="section" id="data-driven">
-  <div class="section-head"><h2>Data-driven / 可 QT</h2><span class="count">419 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064958315189461124">
+  <div class="section-head"><h2>Data-driven / 可 QT</h2><span class="count">430 posts</span></div>
+  <div class="grid"><article class="card" id="post-2065004593164267785">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:33:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">market</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@BNBCHAIN 轉推 CoinDesk 訪談觀點，提到 VanEck 人士認為 BNB 可能是美國投資者低估的公鏈之一。</p>
+  <p class="meta">研究筆記：涉及機構視角與市場認知，可追蹤 BNB Chain 在美國投資者中的敘事變化。</p>
+  <div class="orig">RT @CoinDesk: .@KyleDacruz of @VanEck_US says BNB may be one of the most underappreciated chains among U.S. investors.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004593164267785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004593164267785</div>
+</article><article class="card" id="post-2065000563843190899">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 09:17:54 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">@XLayerOfficial 稱 X Layer 在 agents 與 feedback 的主網成長排名前五，強調正在成為 agent economy 的鏈上執行環境。</p>
+  <p class="meta">研究筆記：包含主網成長排名與 AI agent 敘事，可後續補充成長指標與生態活躍度數據。</p>
+  <div class="orig">We&#x27;re top 5 in mainnet growth across agents and feedback.
+
+More agents, more signals, more real activity.
+
+X Layer is becoming a home for the agent economy - fast, scalable, and built for onchain execution.</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2065000563843190899" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065000563843190899</div>
+</article><article class="card" id="post-2064991260159713606">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 引導閱讀其成為 stablecoin settlement layer 的文章，延續穩定幣結算層敘事。</p>
+  <p class="meta">研究筆記：穩定幣結算層是高價值金融基礎設施主題，適合追蹤 TVL、持有人與支付使用數據。</p>
+  <div class="orig">Learn why Arbitrum is becoming the settlement layer for stablecoins:
+
+https://blog.arbitrum.io/settlement-layer-stablecoins/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991260159713606" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991260159713606</div>
+</article><article class="card" id="post-2064991247786459167">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 強調 stablecoins 正成為 programmable economy 的預設結算資產，並稱 Arbitrum 擁有 78 億美元穩定幣與 775 萬持有人。</p>
+  <p class="meta">研究筆記：包含明確穩定幣金額與持有人數，是可延伸為數據型內容的高價值訊號。</p>
+  <div class="orig">Stablecoins are becoming the default settlement asset of the programmable economy.
+
+They power trading, lending, payments and global value transfer.
+
+With $7.8B in stablecoins and 7.75M holders, Arbitrum is emerging as the settlement layer for the next generation of finance.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991247786459167" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991247786459167</div>
+</article><article class="card" id="post-2064958315189461124">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 06:30:02 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">prediction-market</span><span class="badge">original</span><span class="badge">normal</span></div>
   <p class="summary">@BNBCHAIN 以 MyriadMarkets 預測市場數據包裝 BNB World Cup 話題，提到使用者給墨西哥 70% 勝率。</p>
@@ -6064,6 +6580,16 @@ Fast execution. Non-custodial. No KYC.…</div>
   <div class="orig">RT @TRON_INC: Tron Inc. (NASDAQ: TRON) acquired 154,608 TRX tokens today at an average price of $0.3234 further increasing its TRX treasury…</div>
   <a class="link" href="https://x.com/trondao/status/2064909601355731150" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064909601355731150</div>
+</article><article class="card" id="post-2064904582556537169">
+  <div class="top"><div class="author">@KaiaChain</div><div class="time">2026-06-11 02:56:31 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">@KaiaChain 評論 AI agent 與鏈上結算結合，認為這類現實工具性是市場需要的方向。</p>
+  <p class="meta">研究筆記：AI agent 加鏈上結算屬應用敘事，可追蹤是否延伸為具體產品或合作。</p>
+  <div class="orig">Having an AI agent handle the heavy work while settling onchain is exactly the kind of real-world utility the space needs.
+
+Now we just need an agent to pack our bags</div>
+  <a class="link" href="https://x.com/KaiaChain/status/2064904582556537169" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064904582556537169</div>
 </article><article class="card" id="post-2064896638565412925">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 02:24:57 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -6405,6 +6931,16 @@ Cycle 1 is now open:
 → Supply solana:Es9vMFrzaCERmJfrF4H2FYD4K…</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2064630303881343225" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064630303881343225</div>
+</article><article class="card" id="post-2064618621863931989">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-10 08:00:12 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">reply</span><span class="badge">normal</span></div>
+  <p class="summary">@arbitrum 補充 L1 與 L2 架構選擇文章連結，延伸企業鏈部署與市場進入討論。</p>
+  <p class="meta">研究筆記：L1/L2 架構比較對企業採用與生態策略有參考價值，可追蹤 Arbitrum 對企業市場的定位。</p>
+  <div class="orig">Read more into L1 vs L2 here:
+
+https://blog.arbitrum.io/l1-vs-l2-choosing-the-right-chain-architecture-for-your-enterprise/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064618621863931989" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064618621863931989</div>
 </article><article class="card" id="post-2064618608949690862">
   <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-10 08:00:09 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -6517,6 +7053,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Agents can now settle payments on X Layer and access data across 140+ networks via x402 on @Quicknode. No accounts or API keys required.</div>
   <a class="link" href="https://x.com/XLayerOfficial/status/2064537371622985859" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064537371622985859</div>
+</article><article class="card" id="post-2064500406710071741">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">2026-06-10 00:10:28 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@SeiNetwork 發布 infrastructure 相關更新：RT @SeiNetwork: The modern economy is one where anything of value has a market. These are</p>
+  <p class="meta">研究筆記：Sei 持續強調交易與市場基礎設施定位，可追蹤機構與開發者採用。</p>
+  <div class="orig">RT @SeiNetwork: The modern economy is one where anything of value has a market. These are the institutions, builders, and traders powering…</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2064500406710071741" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064500406710071741</div>
 </article><article class="card" id="post-2064486609320374465">
   <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 23:15:38 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -6589,6 +7133,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Congrats to @even_biz, featured in GBBC’s 2026 Real-World Blockchain Use Cases Handbook. Built on Avalanche, EVEN gives artists like @JColeNC, @6LACK, and @LaRussellGC a way to reward their biggest fans with ownership &amp; access. Find the full EVEN case study in the handbook</div>
   <a class="link" href="https://x.com/avax/status/2064409165406359687" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064409165406359687</div>
+</article><article class="card" id="post-2064407452876251500">
+  <div class="top"><div class="author">@SeiNetwork</div><div class="time">2026-06-09 18:01:06 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge">normal</span></div>
+  <p class="summary">@SeiNetwork 發布 Sei Giga 敘事，主打為機構、開發者與交易者擴展市場基礎設施。</p>
+  <p class="meta">研究筆記：高性能交易與市場基礎設施是 Sei 的核心定位，適合追蹤後續產品與採用數據。</p>
+  <div class="orig">The modern economy is one where anything of value has a market. These are the institutions, builders, and traders powering it. Sei Giga is where they will scale it.</div>
+  <a class="link" href="https://x.com/SeiNetwork/status/2064407452876251500" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064407452876251500</div>
 </article><article class="card" id="post-2064407323305488593">
   <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-09 18:00:35 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">governance</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -6693,6 +7245,22 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Meet UpTop: a digital goods marketplace built by @overtake_world and powered by Sui. Buy gift cards, in-game currency, mobile top-ups, and much more to come, all with stablecoins. Pay in USDC on Sui and get 3% off at checkout. Try it now https://uptop.gg/sui?utm_source=sui_twitter</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2064361134124339665" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064361134124339665</div>
+</article><article class="card" id="post-2064359779087118623">
+  <div class="top"><div class="author">@0xPolygon</div><div class="time">2026-06-09 14:51:39 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@0xPolygon 轉推基礎設施或開發者工具更新，對生態應用與代理工作流具追蹤價值。</p>
+  <p class="meta">研究筆記：基礎設施與工具更新可追蹤開發者採用、代理支付與應用搭建能力。</p>
+  <div class="orig">RT @Quicknode: BIG UPDATE: 1,000,000 free RPC requests per month, per agent, are now available via x402 on Quicknode. No account, no API k...</div>
+  <a class="link" href="https://x.com/0xPolygon/status/2064359779087118623" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064359779087118623</div>
+</article><article class="card" id="post-2064354947718619536">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-09 14:32:28 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@solana 轉推基礎設施或開發者工具更新，對生態應用與代理工作流具追蹤價值。</p>
+  <p class="meta">研究筆記：基礎設施與工具更新可追蹤開發者採用、代理支付與應用搭建能力。</p>
+  <div class="orig">RT @Alchemy: Sadly, an AI agent with an empty wallet can&#x27;t do anything onchain. BUT NOW you can fund an Agent Wallet without leaving the Al...</div>
+  <a class="link" href="https://x.com/solana/status/2064354947718619536" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064354947718619536</div>
 </article><article class="card" id="post-2064343028765016409">
   <div class="top"><div class="author">@Optimism</div><div class="time">2026-06-09 13:45:06 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -6837,6 +7405,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Settlement is the actual endgame. Most of the noise has always been about trading, but when the back office moves to stablecoins, that&#x27;s when we&#x27;ll see true change. For us in Asia, that looks like replacing legacy FX corridors with instant, 24/7 settlement.</div>
   <a class="link" href="https://x.com/KaiaChain/status/2064217368944120187" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2064217368944120187</div>
+</article><article class="card" id="post-2064207442880372870">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-09 04:46:20 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">infrastructure</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">BNB Chain 轉推 four.meme 的 OpenFour 介紹，顯示其從單一 meme launchpad 走向開放、模組化基礎設施。</p>
+  <p class="meta">研究筆記：BNB Chain 轉推 four.meme 的 OpenFour 升級，涉及 meme launchpad 向開放模組化基礎設施演進，對 BNB 生態項目發行與交易工具有追蹤價值。</p>
+  <div class="orig">RT @fourdotmemezh: Introducing OpenFour — https://four.meme/en is evolving from a single meme launchpad into open, modular infrastructur…</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2064207442880372870" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064207442880372870</div>
 </article><article class="card" id="post-2064165615498129698">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">02:00:07 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">migration</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -7741,6 +8317,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">ICYMI: Open Money Stack is in technical preview. Accept deposits, move stablecoins, off-ramp to bank accounts or cash. Early access is limited: https://info.polygon.technology/get-early-access?utm_source=X&amp;utm_medium=Organic_social&amp;utm_campaign=oms_tech_preview&amp;utm_content=form</div>
   <a class="link" href="https://x.com/0xPolygon/status/2062894039418937392" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062894039418937392</div>
+</article><article class="card" id="post-2062883580334710943">
+  <div class="top"><div class="author">@LayerZero_Core</div><div class="time">13:05:46 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">native_retweet</span><span class="badge">normal</span></div>
+  <p class="summary">LayerZero 轉推 Bitcoin Seoul 主舞台分享，強調 crypto 作為更好的貨幣技術，而不只是新資產類別。</p>
+  <p class="meta">研究筆記：LayerZero 轉推 Bitcoin Seoul 主舞台分享，強調 crypto 作為更好的貨幣技術，而不只是新資產類別。</p>
+  <div class="orig">RT @alexlimasia: Grateful for the main stage at Bitcoin Seoul. 1/ Crypto is better money technology. Not just a new asset class, but a fun…</div>
+  <a class="link" href="https://x.com/LayerZero_Core/status/2062883580334710943" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062883580334710943</div>
 </article><article class="card" id="post-2062873393595387925">
   <div class="top"><div class="author">@solana</div><div class="time">12:25:00 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -8309,14 +8893,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">The BNB Chain Q1 2026 Report by @Blockworks is out The report showed a clear pattern: BNB Chain is not growing from one single narrative, but across multiple fronts at once Read the full report</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062515671423201495" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062515671423201495</div>
-</article><article class="card" id="post-2062508799408369752">
-  <div class="top"><div class="author">@0xPolygon</div><div class="time">12:16:31 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">metrics</span><span class="badge">original</span><span class="badge">medium</span></div>
-  <p class="summary">Polygon 以「不是第一次達到兆級」回應交易或結算規模敘事，暗示高吞吐或大額鏈上活動表現。</p>
-  <p class="meta">研究筆記：Polygon 以「不是第一次達到兆級」回應交易或結算規模敘事，暗示高吞吐或大額鏈上活動表現。</p>
-  <div class="orig">not our first Trillion</div>
-  <a class="link" href="https://x.com/0xPolygon/status/2062508799408369752" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2062508799408369752</div>
 </article><article class="card" id="post-2062504690789621944">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">12:00:12 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">performance</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -8325,14 +8901,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">How fast does BNB Chain actually feel? @chainspect_app put it side by side with major networks, and the finality time speaks for itself</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2062504690789621944" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062504690789621944</div>
-</article><article class="card" id="post-2062465310389633439">
-  <div class="top"><div class="author">@Optimism</div><div class="time">09:23:43 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">metrics</span><span class="badge">original</span><span class="badge">medium</span></div>
-  <p class="summary">Optimism 發布簡短數據導向內容，暗示近期指標或增長表現，需結合原帖圖表判讀。</p>
-  <p class="meta">研究筆記：Optimism 發布簡短數據導向內容，暗示近期指標或增長表現，需結合原帖圖表判讀。</p>
-  <div class="orig">Numbers don&#x27;t lie</div>
-  <a class="link" href="https://x.com/Optimism/status/2062465310389633439" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2062465310389633439</div>
 </article><article class="card" id="post-2062444350089671165">
   <div class="top"><div class="author">@KaiaChain</div><div class="time">08:00:26 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">defi</span><span class="badge">quote</span><span class="badge high">high</span></div>
@@ -8405,14 +8973,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">RT @TRON_INC: Tron Inc. (NASDAQ: TRON) acquired 149,627 TRX tokens today at an average price of $0.3342 further increasing its TRX treasury…</div>
   <a class="link" href="https://x.com/trondao/status/2062371935514993102" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062371935514993102</div>
-</article><article class="card" id="post-2062363716281360620">
-  <div class="top"><div class="author">@avax</div><div class="time">02:40:01 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">metrics</span><span class="badge">retweet</span><span class="badge">medium</span></div>
-  <p class="summary">Avalanche 轉發週度指標，重點是過去一週永續合約交易量明顯上升，屬生態活躍度與交易需求訊號。</p>
-  <p class="meta">研究筆記：Avalanche 轉發週度指標，重點是過去一週永續合約交易量明顯上升，屬生態活躍度與交易需求訊號。</p>
-  <div class="orig">RT @joeycannoli9: Here are your @avax weekly metrics! A nice jump in perps volume over the last week. Avalanche saw an increase of 25% in v…</div>
-  <a class="link" href="https://x.com/avax/status/2062363716281360620" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2062363716281360620</div>
 </article><article class="card" id="post-2062278925787578836">
   <div class="top"><div class="author">@arbitrum</div><div class="time">21:03:05 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -8429,6 +8989,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">ICYMI: @Mastercard taps Arbitrum for global stablecoin settlement. Always-on payments, built for the programmable economy.</div>
   <a class="link" href="https://x.com/arbitrum/status/2062278922939633692" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062278922939633692</div>
+</article><article class="card" id="post-2062268650103738403">
+  <div class="top"><div class="author">@SonicLabs</div><div class="time">20:22:15 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">original</span><span class="badge">medium</span></div>
+  <p class="summary">SonicLabs 強調 Sonic 面向使用者且為 agents 最佳化，定位於 AI agent 友善鏈基礎設施。</p>
+  <p class="meta">研究筆記：SonicLabs 強調 Sonic 面向使用者且為 agents 最佳化，定位於 AI agent 友善鏈基礎設施。</p>
+  <div class="orig">Sonic. Built for people. Optimized for agents.</div>
+  <a class="link" href="https://x.com/SonicLabs/status/2062268650103738403" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062268650103738403</div>
 </article><article class="card" id="post-2062260005290528944">
   <div class="top"><div class="author">@solana</div><div class="time">19:47:54 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">defi</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -8477,6 +9045,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Great work from @VIA_Labs and @USDMOfficial. Connecting Midnight and @Cardano testnets is an important step toward interoperable infrastructure, with USDM becoming the first native asset to move between these environments. Excited to see the groundwork being laid. Learn more</div>
   <a class="link" href="https://x.com/MidnightNtwrk/status/2062236120356958591" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062236120356958591</div>
+</article><article class="card" id="post-2062234320480452816">
+  <div class="top"><div class="author">@SuiNetwork</div><div class="time">18:05:51 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">infrastructure</span><span class="badge">original</span><span class="badge">medium</span></div>
+  <p class="summary">Sui 發布 gasless era 相關短訊，暗示其免 gas 或使用者體驗方向的推廣。</p>
+  <p class="meta">研究筆記：Sui 發布 gasless era 相關短訊，暗示其免 gas 或使用者體驗方向的推廣。</p>
+  <div class="orig">gasless era on Sui</div>
+  <a class="link" href="https://x.com/SuiNetwork/status/2062234320480452816" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062234320480452816</div>
 </article><article class="card" id="post-2062234130117763123">
   <div class="top"><div class="author">@SuiNetwork</div><div class="time">18:05:05 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">ai</span><span class="badge">retweet</span><span class="badge high">high</span></div>
@@ -8501,6 +9077,14 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">The Sei Giga upgrade will introduce a fundamentally better trading experience. From perps to RWAs to stablecoins and everything in between. Sei is the blockchain for trading.</div>
   <a class="link" href="https://x.com/SeiNetwork/status/2062228579161624754" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2062228579161624754</div>
+</article><article class="card" id="post-2062208723259638089">
+  <div class="top"><div class="author">@solana</div><div class="time">16:24:08 GMT</div></div>
+  <div class="badges"><span class="badge">項目</span><span class="badge">ai</span><span class="badge">retweet</span><span class="badge">medium</span></div>
+  <p class="summary">Solana 轉發 BitRobotNetwork 開放機器人實驗室進入下一階段的內容，延伸 AI、機器人與生態應用訊號。</p>
+  <p class="meta">研究筆記：Solana 轉發 BitRobotNetwork 開放機器人實驗室進入下一階段的內容，延伸 AI、機器人與生態應用訊號。</p>
+  <div class="orig">RT @BitRobotNetwork: The world&#x27;s open robotics lab is entering its next phase. Contribute robotics work. Level up your lab access. Appl…</div>
+  <a class="link" href="https://x.com/solana/status/2062208723259638089" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2062208723259638089</div>
 </article><article class="card" id="post-2062202403156578651">
   <div class="top"><div class="author">@0xPolygon</div><div class="time">15:59:01 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">payments</span><span class="badge">original</span><span class="badge high">high</span></div>
@@ -9453,14 +10037,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
   <div class="orig">Now live and fully rolled out on mainnet: Stablecoin transfers on Sui are free. No $SUI, no problem. Just send.</div>
   <a class="link" href="https://x.com/SuiNetwork/status/2057560872390885473" target="_blank" rel="noopener">Open post</a>
   <div class="postid">post_id: 2057560872390885473</div>
-</article><article class="card" id="post-2057340664124465419">
-  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-05-21 06:00 GMT</div></div>
-  <div class="badges"><span class="badge">公鏈</span><span class="badge">metrics</span><span class="badge">metrics</span><span class="badge">normal</span></div>
-  <p class="summary">BNB Chain 在 Binance Online 分享最新數據：400 萬日活錢包、1380 億美元橋接資產、全球穩定幣交易量佔比 40%、40 億美元 RWA AUM，以及 17.9 萬個 AI agent。</p>
-  <p class="meta">研究筆記：BNB Chain 在 Binance Online 分享最新數據：400 萬日活錢包、1380 億美元橋接資產、全球穩定幣交易量佔比 40%、40 億美元 RWA AUM，以及 17.9 萬個 AI agent。</p>
-  <div class="orig">2026 is a very important year for BNB Chain. Last week on #BinanceOnline, @nina_rong broke down the scale BNB Chain has reached: 4M daily active wallets, $138B+ in bridged assets, 40% of global stablecoin transaction activity, $4B in RWA AUM, 179k+ AI agents live.</div>
-  <a class="link" href="https://x.com/BNBCHAIN/status/2057340664124465419" target="_blank" rel="noopener">Open post</a>
-  <div class="postid">post_id: 2057340664124465419</div>
 </article><article class="card" id="post-2057334426783396205">
   <div class="top"><div class="author">@trondao</div><div class="time">2026-05-21 05:35 GMT</div></div>
   <div class="badges"><span class="badge">項目</span><span class="badge">treasury</span><span class="badge">treasury</span><span class="badge">normal</span></div>
@@ -9472,8 +10048,142 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 <section class="section" id="chains">
-  <div class="section-head"><h2>公鏈</h2><span class="count">801 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064958327747178990">
+  <div class="section-head"><h2>公鏈</h2><span class="count">816 posts</span></div>
+  <div class="grid"><article class="card" id="post-2065011161930580203">
+  <div class="top"><div class="author">@trondao</div><div class="time">2026-06-11 10:00:01 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">original</span><span class="badge">low</span></div>
+  <p class="summary">@trondao 發起 World Cup 社群互動，邀請用戶留下支持隊伍。</p>
+  <p class="meta">研究筆記：偏社群互動與活動氣氛，監測價值較低，保留於完整列表。</p>
+  <div class="orig">World Cup starts today!
+
+Drop the flag you are repping! ⬇</div>
+  <a class="link" href="https://x.com/trondao/status/2065011161930580203" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065011161930580203</div>
+</article><article class="card" id="post-2065008877826138177">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:50:57 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，無明確產品或生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Word up</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065008877826138177" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065008877826138177</div>
+</article><article class="card" id="post-2065006566047404107">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:41:45 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，內容偏互動。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Wait what</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065006566047404107" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065006566047404107</div>
+</article><article class="card" id="post-2065006385692283063">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:41:02 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 回覆提示某活動今日開始，但未提供具體鏈上或產品細節。</p>
+  <p class="meta">研究筆記：活動預熱型社群內容，保留於完整列表。</p>
+  <div class="orig">It all starts today</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065006385692283063" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065006385692283063</div>
+</article><article class="card" id="post-2065005536907841639">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:37:40 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，未包含可追蹤資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Not bad</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065005536907841639" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065005536907841639</div>
+</article><article class="card" id="post-2065004593164267785">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:33:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">market</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@BNBCHAIN 轉推 CoinDesk 訪談觀點，提到 VanEck 人士認為 BNB 可能是美國投資者低估的公鏈之一。</p>
+  <p class="meta">研究筆記：涉及機構視角與市場認知，可追蹤 BNB Chain 在美國投資者中的敘事變化。</p>
+  <div class="orig">RT @CoinDesk: .@KyleDacruz of @VanEck_US says BNB may be one of the most underappreciated chains among U.S. investors.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004593164267785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004593164267785</div>
+</article><article class="card" id="post-2065004363748200666">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-11 09:33:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">developer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 轉推 Edda Labs 的 Midnight Sprint 已啟動，參與者將進行實作型學習與開發流程。</p>
+  <p class="meta">研究筆記：開發者教育與生態活動訊號，可追蹤 Midnight 生態 builder 參與度。</p>
+  <div class="orig">RT @ErickRomeroEdda: The @eddalabs_io Midnight Sprint is officially underway!
+
+ Participants will progress through a hands-on journey: l…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2065004363748200666" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004363748200666</div>
+</article><article class="card" id="post-2065004187449180483">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:32:18 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短評論回覆，未包含明確項目或數據。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Interesting take</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004187449180483" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004187449180483</div>
+</article><article class="card" id="post-2065003980313477357">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:31:29 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 以口語方式進行社群互動，未包含可追蹤生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">ngl I need all the support I can get</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065003980313477357" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065003980313477357</div>
+</article><article class="card" id="post-2065003721533399083">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:30:27 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，無明確監測價值。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">I&#x27;m trying</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065003721533399083" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065003721533399083</div>
+</article><article class="card" id="post-2065000563843190899">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 09:17:54 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">@XLayerOfficial 稱 X Layer 在 agents 與 feedback 的主網成長排名前五，強調正在成為 agent economy 的鏈上執行環境。</p>
+  <p class="meta">研究筆記：包含主網成長排名與 AI agent 敘事，可後續補充成長指標與生態活躍度數據。</p>
+  <div class="orig">We&#x27;re top 5 in mainnet growth across agents and feedback.
+
+More agents, more signals, more real activity.
+
+X Layer is becoming a home for the agent economy - fast, scalable, and built for onchain execution.</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2065000563843190899" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065000563843190899</div>
+</article><article class="card" id="post-2064994333389140101">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 08:53:09 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@XLayerOfficial 發出表情式回覆，依顯示規則已移除表情符號。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">[原文僅含表情符號，已依規則移除]</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2064994333389140101" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064994333389140101</div>
+</article><article class="card" id="post-2064991260159713606">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 引導閱讀其成為 stablecoin settlement layer 的文章，延續穩定幣結算層敘事。</p>
+  <p class="meta">研究筆記：穩定幣結算層是高價值金融基礎設施主題，適合追蹤 TVL、持有人與支付使用數據。</p>
+  <div class="orig">Learn why Arbitrum is becoming the settlement layer for stablecoins:
+
+https://blog.arbitrum.io/settlement-layer-stablecoins/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991260159713606" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991260159713606</div>
+</article><article class="card" id="post-2064991247786459167">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 強調 stablecoins 正成為 programmable economy 的預設結算資產，並稱 Arbitrum 擁有 78 億美元穩定幣與 775 萬持有人。</p>
+  <p class="meta">研究筆記：包含明確穩定幣金額與持有人數，是可延伸為數據型內容的高價值訊號。</p>
+  <div class="orig">Stablecoins are becoming the default settlement asset of the programmable economy.
+
+They power trading, lending, payments and global value transfer.
+
+With $7.8B in stablecoins and 7.75M holders, Arbitrum is emerging as the settlement layer for the next generation of finance.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991247786459167" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991247786459167</div>
+</article><article class="card" id="post-2064988807183605959">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-11 08:31:11 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@solana 發出簡短社群加油回覆，未包含具體生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Vamos</div>
+  <a class="link" href="https://x.com/solana/status/2064988807183605959" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064988807183605959</div>
+</article><article class="card" id="post-2064958327747178990">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 06:30:05 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">quote</span><span class="badge">low</span></div>
   <p class="summary">@BNBCHAIN 引用 BNB World Cup 互動投票，邀請社群預測賽果並參與周邊獎勵活動。</p>
@@ -9552,11 +10262,11 @@ Learn more about how Community vs The Intern works</div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">quote</span><span class="badge">low</span></div>
   <p class="summary">@BNBCHAIN 以社群對 Intern 的趣味形式預熱 BNB World Cup 預測活動。</p>
   <p class="meta">研究筆記：主要是社群互動與活動預熱，研究價值較低，保留於完整列表。</p>
-  <div class="orig">Community        The Intern
+  <div class="orig">Community The Intern
 
-( •_•)                                 (•_• )
-( ง )ง                                ୧( ୧ )
-/︶\                                   /︶\
+( •_•) (•_• )
+( ง )ง ୧( ୧ )
+/︶\ /︶\
 
 Who thinks you can outpredict The Intern?</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2064929799613878673" target="_blank" rel="noopener">Open post</a>
@@ -17846,8 +18556,142 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 <section class="section" id="all">
-  <div class="section-head"><h2>全部</h2><span class="count">1026 posts</span></div>
-  <div class="grid"><article class="card" id="post-2064958327747178990">
+  <div class="section-head"><h2>全部</h2><span class="count">1041 posts</span></div>
+  <div class="grid"><article class="card" id="post-2065011161930580203">
+  <div class="top"><div class="author">@trondao</div><div class="time">2026-06-11 10:00:01 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">original</span><span class="badge">low</span></div>
+  <p class="summary">@trondao 發起 World Cup 社群互動，邀請用戶留下支持隊伍。</p>
+  <p class="meta">研究筆記：偏社群互動與活動氣氛，監測價值較低，保留於完整列表。</p>
+  <div class="orig">World Cup starts today!
+
+Drop the flag you are repping! ⬇</div>
+  <a class="link" href="https://x.com/trondao/status/2065011161930580203" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065011161930580203</div>
+</article><article class="card" id="post-2065008877826138177">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:50:57 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，無明確產品或生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Word up</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065008877826138177" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065008877826138177</div>
+</article><article class="card" id="post-2065006566047404107">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:41:45 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，內容偏互動。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Wait what</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065006566047404107" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065006566047404107</div>
+</article><article class="card" id="post-2065006385692283063">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:41:02 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 回覆提示某活動今日開始，但未提供具體鏈上或產品細節。</p>
+  <p class="meta">研究筆記：活動預熱型社群內容，保留於完整列表。</p>
+  <div class="orig">It all starts today</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065006385692283063" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065006385692283063</div>
+</article><article class="card" id="post-2065005536907841639">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:37:40 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，未包含可追蹤資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Not bad</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065005536907841639" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065005536907841639</div>
+</article><article class="card" id="post-2065004593164267785">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:33:55 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">market</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@BNBCHAIN 轉推 CoinDesk 訪談觀點，提到 VanEck 人士認為 BNB 可能是美國投資者低估的公鏈之一。</p>
+  <p class="meta">研究筆記：涉及機構視角與市場認知，可追蹤 BNB Chain 在美國投資者中的敘事變化。</p>
+  <div class="orig">RT @CoinDesk: .@KyleDacruz of @VanEck_US says BNB may be one of the most underappreciated chains among U.S. investors.</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004593164267785" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004593164267785</div>
+</article><article class="card" id="post-2065004363748200666">
+  <div class="top"><div class="author">@MidnightNtwrk</div><div class="time">2026-06-11 09:33:00 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">developer</span><span class="badge">retweet</span><span class="badge">normal</span></div>
+  <p class="summary">@MidnightNtwrk 轉推 Edda Labs 的 Midnight Sprint 已啟動，參與者將進行實作型學習與開發流程。</p>
+  <p class="meta">研究筆記：開發者教育與生態活動訊號，可追蹤 Midnight 生態 builder 參與度。</p>
+  <div class="orig">RT @ErickRomeroEdda: The @eddalabs_io Midnight Sprint is officially underway!
+
+ Participants will progress through a hands-on journey: l…</div>
+  <a class="link" href="https://x.com/MidnightNtwrk/status/2065004363748200666" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004363748200666</div>
+</article><article class="card" id="post-2065004187449180483">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:32:18 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短評論回覆，未包含明確項目或數據。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Interesting take</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065004187449180483" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065004187449180483</div>
+</article><article class="card" id="post-2065003980313477357">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:31:29 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 以口語方式進行社群互動，未包含可追蹤生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">ngl I need all the support I can get</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065003980313477357" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065003980313477357</div>
+</article><article class="card" id="post-2065003721533399083">
+  <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 09:30:27 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@BNBCHAIN 發出簡短社群回覆，無明確監測價值。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">I&#x27;m trying</div>
+  <a class="link" href="https://x.com/BNBCHAIN/status/2065003721533399083" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065003721533399083</div>
+</article><article class="card" id="post-2065000563843190899">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 09:17:54 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">ai</span><span class="badge">quote</span><span class="badge high">high</span></div>
+  <p class="summary">@XLayerOfficial 稱 X Layer 在 agents 與 feedback 的主網成長排名前五，強調正在成為 agent economy 的鏈上執行環境。</p>
+  <p class="meta">研究筆記：包含主網成長排名與 AI agent 敘事，可後續補充成長指標與生態活躍度數據。</p>
+  <div class="orig">We&#x27;re top 5 in mainnet growth across agents and feedback.
+
+More agents, more signals, more real activity.
+
+X Layer is becoming a home for the agent economy - fast, scalable, and built for onchain execution.</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2065000563843190899" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2065000563843190899</div>
+</article><article class="card" id="post-2064994333389140101">
+  <div class="top"><div class="author">@XLayerOfficial</div><div class="time">2026-06-11 08:53:09 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@XLayerOfficial 發出表情式回覆，依顯示規則已移除表情符號。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">[原文僅含表情符號，已依規則移除]</div>
+  <a class="link" href="https://x.com/XLayerOfficial/status/2064994333389140101" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064994333389140101</div>
+</article><article class="card" id="post-2064991260159713606">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:56 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">reply</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 引導閱讀其成為 stablecoin settlement layer 的文章，延續穩定幣結算層敘事。</p>
+  <p class="meta">研究筆記：穩定幣結算層是高價值金融基礎設施主題，適合追蹤 TVL、持有人與支付使用數據。</p>
+  <div class="orig">Learn why Arbitrum is becoming the settlement layer for stablecoins:
+
+https://blog.arbitrum.io/settlement-layer-stablecoins/</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991260159713606" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991260159713606</div>
+</article><article class="card" id="post-2064991247786459167">
+  <div class="top"><div class="author">@arbitrum</div><div class="time">2026-06-11 08:40:53 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">stablecoin</span><span class="badge">original</span><span class="badge high">high</span></div>
+  <p class="summary">@arbitrum 強調 stablecoins 正成為 programmable economy 的預設結算資產，並稱 Arbitrum 擁有 78 億美元穩定幣與 775 萬持有人。</p>
+  <p class="meta">研究筆記：包含明確穩定幣金額與持有人數，是可延伸為數據型內容的高價值訊號。</p>
+  <div class="orig">Stablecoins are becoming the default settlement asset of the programmable economy.
+
+They power trading, lending, payments and global value transfer.
+
+With $7.8B in stablecoins and 7.75M holders, Arbitrum is emerging as the settlement layer for the next generation of finance.</div>
+  <a class="link" href="https://x.com/arbitrum/status/2064991247786459167" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064991247786459167</div>
+</article><article class="card" id="post-2064988807183605959">
+  <div class="top"><div class="author">@solana</div><div class="time">2026-06-11 08:31:11 GMT</div></div>
+  <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">reply</span><span class="badge">low</span></div>
+  <p class="summary">@solana 發出簡短社群加油回覆，未包含具體生態資訊。</p>
+  <p class="meta">研究筆記：低訊號互動內容，保留於完整列表。</p>
+  <div class="orig">Vamos</div>
+  <a class="link" href="https://x.com/solana/status/2064988807183605959" target="_blank" rel="noopener">Open post</a>
+  <div class="postid">post_id: 2064988807183605959</div>
+</article><article class="card" id="post-2064958327747178990">
   <div class="top"><div class="author">@BNBCHAIN</div><div class="time">2026-06-11 06:30:05 GMT</div></div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">quote</span><span class="badge">low</span></div>
   <p class="summary">@BNBCHAIN 引用 BNB World Cup 互動投票，邀請社群預測賽果並參與周邊獎勵活動。</p>
@@ -17926,11 +18770,11 @@ Learn more about how Community vs The Intern works</div>
   <div class="badges"><span class="badge">公鏈</span><span class="badge">community</span><span class="badge">quote</span><span class="badge">low</span></div>
   <p class="summary">@BNBCHAIN 以社群對 Intern 的趣味形式預熱 BNB World Cup 預測活動。</p>
   <p class="meta">研究筆記：主要是社群互動與活動預熱，研究價值較低，保留於完整列表。</p>
-  <div class="orig">Community        The Intern
+  <div class="orig">Community The Intern
 
-( •_•)                                 (•_• )
-( ง )ง                                ୧( ୧ )
-/︶\                                   /︶\
+( •_•) (•_• )
+( ง )ง ୧( ୧ )
+/︶\ /︶\
 
 Who thinks you can outpredict The Intern?</div>
   <a class="link" href="https://x.com/BNBCHAIN/status/2064929799613878673" target="_blank" rel="noopener">Open post</a>
@@ -26232,5 +27076,6 @@ Unifi 2.0 - PLUS Mode &amp; KAIA Boost have been…</div>
 </article></div>
 </section>
 </main>
+<footer>Source list: 2057339251940069587. Last updated 2026-06-11 18:05 CST. Public dashboard title: X post monitor.</footer>
 </body>
 </html>
